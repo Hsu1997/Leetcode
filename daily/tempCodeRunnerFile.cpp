@@ -1,2 +1,3 @@
 
-    S.cloneGraph(a);
+    //     cout << (int)i << endl;
+    // }
