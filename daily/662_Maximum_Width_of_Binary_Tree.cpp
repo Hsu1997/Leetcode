@@ -70,7 +70,7 @@ void PrintTree(TreeNode* root){
     while(!q.empty()){
         current = q.front();
         q.pop();
-        cout << current->val << " ";
+        cout << current->val << "  ";
         if (current->left != nullptr) q.push(current->left);
         if (current->right != nullptr) q.push(current->right);
     }
