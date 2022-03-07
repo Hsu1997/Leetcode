@@ -27,7 +27,7 @@ public:
             queue< pair<int, int> > q_new;
             // cout << "q size = " << q.size() << endl;
             int q_size = q.size();
-            for (int i = 0; i < q_size; ++i){
+            for (int i = 0; i < q_size; i++){
                 // cout << "in the queue " << i << endl;
                 pair<int, int> current_pair = q.front();
                 q.pop();
