@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -32,7 +33,7 @@ public:
         }
         while(l2){
             current->next = new ListNode( (l2->val + carry) % 10 );
-            carry = (l1->val + carry) / 10;
+            carry = (l2->val + carry) / 10;
             l2 = l2->next;
             current = current->next;
         }
@@ -41,6 +42,31 @@ public:
     }
 };
 
+ListNode* CreateList(vector<int> nums){
+    if (nums.size() < 1) return nullptr;
+    ListNode *pseude = new ListNode();
+    ListNode *current = pseude;
+    for (auto i : nums){
+        current->next = new ListNode(i);
+        current = current->next;
+    } 
+    return pseude->next;
+}
+
+void PrintList(ListNode *root){
+    while(root){
+        cout << root->val << " ";
+        root = root->next;
+    }
+    cout << endl;
+}
+
 int main(){
+    vector<int> nums1 = {9,9,9,9,9,9,9};
+    vector<int> nums2 = {9,9,9,9};
+    ListNode *l1 = CreateList(nums1);
+    ListNode *l2 = CreateList(nums2);
+    Solution S;
+    PrintList(S.addTwoNumbers(l1, l2));
     return 0;
 }
