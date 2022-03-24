@@ -22,7 +22,7 @@ public:
 };
 
 int main(){
-    vector<int> people = {3,2,3,2,2};
+    vector<int> people = {6,5,4,2,6};
     // people.erase(people.begin());
     // for (auto i : people) cout << i << " ";
     // cout << endl;
