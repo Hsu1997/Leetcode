@@ -52,6 +52,6 @@ int main(){
     Solution S;
     vector<int> ans = S.kWeakestRows(mat, k);
     for (auto i : ans) cout << i << " ";
-    cout << endl;
+    cout << '\n';
     return 0;
 }
