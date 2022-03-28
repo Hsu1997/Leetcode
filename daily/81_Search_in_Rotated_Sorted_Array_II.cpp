@@ -29,8 +29,8 @@ public:
             else i = mid + 1;
             rotation = i;
 
-            for (int k = i; k != j; ++k%=nums.size()) cout << nums[k] << " ";
-            cout << nums[j] << endl;
+            // for (int k = i; k != j; ++k%=nums.size()) cout << nums[k] << " ";
+            // cout << nums[j] << endl;
         }
         
         
