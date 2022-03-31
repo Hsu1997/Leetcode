@@ -44,8 +44,8 @@ public:
 };
 
 int main(){
-    // vector<int> nums = {7,2,5,10,8};
-    vector<int> nums = {1,4,4};
+    vector<int> nums = {7,2,5,10,8};
+    // vector<int> nums = {1,4,4};
     int m = 3;
     Solution S;
     cout << S.splitArray(nums, m) << endl;
