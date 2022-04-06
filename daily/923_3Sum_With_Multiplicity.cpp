@@ -15,18 +15,16 @@ public:
             for (int j = i; j <= min(target, 100); j++){
                 int find = target - i - j;
                 // cout << i << " " << j << " " << find << endl;
-                if (find < 0 || find < j) break;
+                if (find < j) break;
                 if (find > 100) continue;
-                double temp = count[i] % module;
+                double temp = count[i];
                 count[i]--;
-                temp *= (count[j] % module);
-                temp = fmod(temp, module);
+                temp *= count[j];
                 count[j]--;
-                temp *= (count[find] % module);
-                if (i == j && j == find) temp /= 6;
-                else if (i == j || j == find || i == find) temp /= 2;
-                temp = fmod(temp, module);
-                ans += (int)temp;
+                temp *= count[find];
+                if (i == j || j == find || i == find) temp /= 2;
+                if (i == j && j == find) temp /= 3;
+                ans += (int)fmod(temp, module);
                 count[i]++;
                 count[j]++;
                 // cout << ans << endl;

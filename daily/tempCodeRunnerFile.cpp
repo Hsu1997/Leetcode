@@ -1,1 +1,1 @@
-if (nums.size() == 1) return;
+ < 0 || 
