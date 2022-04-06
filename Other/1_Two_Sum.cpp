@@ -4,6 +4,27 @@
 
 using namespace std;
 
+// class Solution {
+// public:
+//     vector<int> twoSum(vector<int>& nums, int target) {
+//         vector<int> ans = {};
+//         vector<pair<int,int>> sorted = {};
+//         for (int i = 0; i < nums.size(); i++) sorted.push_back(make_pair(nums[i], i));
+//         sort(sorted.begin(), sorted.end());
+//         int start = 0;
+//         int end = nums.size()-1;
+//         while(start < end){
+//             if (sorted[start].first + sorted[end].first == target) break;
+//             else if (sorted[start].first + sorted[end].first > target) end--;
+//             else start++;
+//         }
+//         ans.push_back(sorted[start].second);
+//         ans.push_back(sorted[end].second);
+//         return ans;
+//     }
+// };
+
+
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
