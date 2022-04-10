@@ -22,11 +22,12 @@ public:
     }
 
     int splitArray(vector<int>& nums, int m) {
-        int min = numeric_limits<int>::max();
+        // int min = numeric_limits<int>::max();
+        int min = 0;
         int max = 0;
         for (auto &i : nums){
             max += i;
-            if (i < min) min = i;
+            if (i > min) min = i;
         }
         // cout << ", min = " << min << ", max = " << max << endl;
         while(min < max){
