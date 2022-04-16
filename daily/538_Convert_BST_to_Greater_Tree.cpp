@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 // Definition for a binary tree node.
 struct TreeNode {
     int val;
@@ -45,7 +44,7 @@ TreeNode* CreateTree(vector<int> nums){
             // cout << i << " : " << temp->left->val << endl;
             i++;
             que.push(temp->left);
-            if (nums[i] == -1) continue;
+            if (i == nums.size() || nums[i] == -1) continue;
             temp->right = new TreeNode(nums[i]);
             // cout << i << " : " << temp->right->val << endl;
             i++;
@@ -72,7 +71,7 @@ class Solution {
 public:
     int accumulate = 0;
     TreeNode* convertBST(TreeNode* root) {
-        if (root == nullptr) return root;
+        if (!root) return root;
 
         convertBST(root->right);
         accumulate += root->val;
