@@ -56,53 +56,37 @@ void PrintTree(TreeNode* root){
 
 class Solution {
 public:
-    // TreeNode* pseudo = new TreeNode(numeric_limits<int>::min());
-    TreeNode* previous;
-    TreeNode* abnormal1;
-    TreeNode* abnormal2;
-    int find = 0;
+    TreeNode* previous = new TreeNode(numeric_limits<int>::min());
+    TreeNode* abnormal1 = nullptr;
+    TreeNode* abnormal2 = nullptr;
 
     void inorder(TreeNode* root){
         if (!root) return;
+
         inorder(root->left);
-        // cout << root->val << " start"<< endl;
-        // cout << "root = " << root->val << ", previous = " << previous->val << endl;
-        if (find == 1 && root->val < previous->val){
-            find++;
+        if (abnormal1 != nullptr && root->val < previous->val){
             abnormal2 = root;
-            swap(abnormal1->val, abnormal2->val);
             return;
         }
-        if (find == 0 && root->val < previous->val){
+        if (abnormal1 == nullptr && root->val < previous->val){
             abnormal1 = previous;
             abnormal2 = root;
-            find++;
         }
         previous = root;
-        // temp++;
-        // cout << "temp = " << temp << endl;
-        // cout << find << " previous = " << previous->val << endl;
         inorder(root->right);
-        // cout << "previous = " << previous->val << ", abnormal_1 = " << abnormal1->val << ", abnormal_2 = " << abnormal2->val << endl;
-        // cout << root->val << " end"<< endl;
         return;
     }
 
     void recoverTree(TreeNode* root) {
-        TreeNode* first = root;
-        while(first->left != nullptr) first = first->left;
-        previous = first;
-        abnormal1 = first;
-        // cout << "start first = " << previous->val << endl;
         inorder(root);
-        if (find == 1) swap(abnormal1->val, abnormal2->val);
+        swap(abnormal1->val, abnormal2->val);
         return;
     }
 };
 
 int main(){
-    vector<int> nums = {3,1,4,-1,-1,2};
-    // vector<int> nums = {1,3,-1,-1,2};
+    // vector<int> nums = {3,1,4,-1,-1,2};
+    vector<int> nums = {1,3,-1,-1,2};
     
     TreeNode* root = CreateTree(nums);
     PrintTree(root);
