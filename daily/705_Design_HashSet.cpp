@@ -6,11 +6,11 @@ using namespace std;
 class MyHashSet {
 public:
     static const int index_size = 10;
-    vector<vector<int>> hashset;
-    // vector<int> hashset[index_size];
+    // vector<vector<int>> hashset;
+    vector<int> hashset[index_size];
     
     MyHashSet() {
-        hashset.reserve(index_size);
+        // hashset.resize(index_size);
     }
     
     void add(int key) {
