@@ -14,7 +14,12 @@ public:
     
     void put(int key, int value) {
         int index = key % index_size;
-        remove(key);
+        for (vector< pair<int, int>>::iterator i = hashset[index].begin(); i != hashset[index].end(); i++){
+            if (i->first == key){
+                i->second = value;
+                return;
+            }
+        }
         hashset[index].push_back(make_pair(key, value));
     }
     
@@ -36,14 +41,14 @@ public:
         }
     }
 
-    // void printall(){
-    //     for (auto i : hashset){
-    //         for (auto j : i){
-    //             cout << "(" << j.first << "," << j.second << "), ";
-    //         }
-    //     }
-    //     cout << endl;
-    // }
+    void printall(){
+        for (auto i : hashset){
+            for (auto j : i){
+                cout << "(" << j.first << "," << j.second << "), ";
+            }
+        }
+        cout << endl;
+    }
 };
 
 /**
@@ -60,12 +65,12 @@ int main(){
     // myHashMap->printall();
     myHashMap->put(2, 2); // The map is now [[1,1], [2,2]]
     // myHashMap->printall();
-    // cout << myHashMap->get(1) << endl;;    // return 1, The map is now [[1,1], [2,2]]
-    // cout << myHashMap->get(3) << endl;    // return -1 (i.e., not found), The map is now [[1,1], [2,2]]
+    cout << myHashMap->get(1) << endl;;    // return 1, The map is now [[1,1], [2,2]]
+    cout << myHashMap->get(3) << endl;    // return -1 (i.e., not found), The map is now [[1,1], [2,2]]
     myHashMap->put(2, 1); // The map is now [[1,1], [2,1]] (i.e., update the existing value)
     // myHashMap->printall();
-    // cout << myHashMap->get(2) << endl;    // return 1, The map is now [[1,1], [2,1]]
+    cout << myHashMap->get(2) << endl;    // return 1, The map is now [[1,1], [2,1]]
     myHashMap->remove(2); // remove the mapping for 2, The map is now [[1,1]]
-    // cout << myHashMap->get(2) << endl;    // return -1 (i.e., not found), The map is now [[1,1]]
+    cout << myHashMap->get(2) << endl;    // return -1 (i.e., not found), The map is now [[1,1]]
     return 0;
 }
