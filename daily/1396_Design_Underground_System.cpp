@@ -8,7 +8,6 @@ using namespace std;
 class UndergroundSystem {
 public:
     unordered_map<int, pair<string, int>> in_out_record;
-    // statr station: (ending station , vector<total time, numbers>)
     unordered_map<string, pair<int, int>> total_status;
 
     UndergroundSystem() {}
@@ -24,12 +23,6 @@ public:
         string end = stationName;
         int time = t - temp.second;
         string route = start + ',' + end;
-
-        // if (status.find((record_status){start, end}) != status.end()){
-        //     status[(record_status){start, end}][0] += time;
-        //     status[(record_status){start, end}][1]++;
-        //     return;
-        // } 
 
         total_status[route].first += time;
         total_status[route].second++;
