@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <unordered_map>
 
 using namespace std;
 
@@ -44,24 +45,25 @@ public:
         for (auto i : pairs){
             set.join(i[0], i[1]);
         }
-        for (int i = 0; i < s.size(); i++) set.find(i);
+        // for (int i = 0; i < s.size(); i++) set.find(i);
 
         // for (auto i : set.group) cout << i << " ";
         // cout << endl;
 
-        vector<vector<char>> record_s(s.size(), vector<char>());
-        vector<vector<int>> record_p(s.size(), vector<int>());
+        unordered_map<int, vector<int>> component;
         for (int i = 0; i < s.size(); i++){
-            record_s[set.find(i)].push_back(s[i]);
-            record_p[set.find(i)].push_back(i);
+            component[set.find(i)].push_back(i);
         }
-        for (int i = 0; i < s.size(); i++){
-            sort(record_s[i].begin(), record_s[i].end());
-            sort(record_p[i].begin(), record_p[i].end());
-        }
-        for (int i = 0; i < s.size(); i++){
-            for (int j = 0; j < record_s[i].size(); j++){
-                s[record_p[i][j]] = record_s[i][j];
+        for (auto now_component : component){
+            vector<char> temp_char;
+            vector<int> temp_position = now_component.second;
+            sort(temp_position.begin(), temp_position.end());
+            for (int i : temp_position){
+                temp_char.push_back(s[i]);
+            }
+            sort(temp_char.begin(), temp_char.end());
+            for (int i = 0; i < temp_position.size(); i++){
+                s[temp_position[i]] = temp_char[i];
             }
         }
         return s;
