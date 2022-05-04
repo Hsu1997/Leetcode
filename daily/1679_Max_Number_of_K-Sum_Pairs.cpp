@@ -36,10 +36,10 @@ public:
 };
 
 int main(){
-    vector<int> nums = {1,2,3,4};
-    int k = 5;
-    // vector<int> nums = {3,1,3,4,3};
-    // int k = 6;
+    // vector<int> nums = {1,2,3,4};
+    // int k = 5;
+    vector<int> nums = {3,1,3,4,3};
+    int k = 6;
     Solution S;
     cout << S.maxOperations(nums, k) << endl;
     return 0;
