@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
+/*
 // Definition for a Node.
 class Node {
 public:
@@ -18,22 +14,38 @@ public:
     Node(int _val, Node* _left, Node* _right, Node* _next)
         : val(_val), left(_left), right(_right), next(_next) {}
 };
-
-Node createtree(vector<int> root){
-    *root = new Node(root[0]);
-
-
-}
+*/
 
 class Solution {
 public:
     Node* connect(Node* root) {
+        if (root == NULL) return NULL;
         
+        queue<Node*> que;
+        que.push(root);
+        
+        while(!que.empty()){
+            int size = que.size();
+            Node* pre = NULL;
+            Node* temp = NULL;
+            
+            while(size > 0){
+                temp = que.front();
+                que.pop();
+                size--;
+                
+                if (temp->left != NULL) que.push(temp->left);
+                if (temp->right != NULL) que.push(temp->right);
+                
+                if (pre == NULL){
+                    pre = temp;
+                }
+                else{
+                    pre->next = temp;
+                    pre = temp;
+                }
+            }            
+        }
+        return root;
     }
 };
-
-int main(){
-    vector<int> root = {1,2,3,4,5,-1,7};
-
-}
-
