@@ -12,7 +12,7 @@ public:
         for (int i = 0; i < s.length(); i++){
             int j = i - 1; 
             int k = i;
-            // for even size string
+            // for every even size string, they have duplicate chracters.
             while(k < s.length()-1 && s[k] == s[k+1]) k++;
             // k is the last element with same character
             ans += (k - j)*(k - j + 1) / 2;
