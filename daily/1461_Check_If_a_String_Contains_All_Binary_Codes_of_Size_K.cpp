@@ -18,20 +18,24 @@ public:
     bool hasAllCodes(string s, int k) {
         if (s.length() < k) return false;
 
+        int count = 0;
         vector<bool> table(pow(2,k), 0);
+
         for (int i = 0; i < s.length() - k + 1; i++){
             int temp = bit_to_int(s.substr(i,k));
-            // cout << temp << endl;
-            table[temp] = true;
+            if (!table[temp]){
+                table[temp] = true;
+                count++;
+                if (count == pow(2,k)) return true;
+            }
         }
-        for (auto i : table) if (!i) return false;
-        return true;
+        return false;
     }
 };
 
 int main(){
-    string s = "0";
-    int k = 20;
+    string s = "0110";
+    int k = 2;
     // string s = "00110110";
     // int k = 2;
     Solution S;
