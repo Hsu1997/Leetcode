@@ -11,7 +11,8 @@ public:
     vector<vector<string>> ans;
 
     void record(){
-        vector<string> temp;
+        vector<string> temp(n, string(n, '.'));
+
         // for (auto i : table){
         //     for (auto j : i){
         //         cout << j << " ";
@@ -19,13 +20,10 @@ public:
         //     cout << endl;
         // }
 
-        for (auto i : table){
-                string s = "";
-            for (auto j : i){
-                if (j == -1) s += "Q";
-                else s += ".";
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < n; j++){
+                if (table[i][j] == -1) temp[i][j] = 'Q';
             }
-            temp.push_back(s);
         }
         ans.push_back(temp);
     }
@@ -39,7 +37,7 @@ public:
             record();
         }
         else{
-            for (int k = 0; k < n; k++) if (k != j) table[i][k] += 1;
+            // for (int k = 0; k < n; k++) if (k != j) table[i][k] += 1;
             for (int k = i+1; k < n; k++) table[k][j] += 1;
             for (int k = i+1; k < n; k++){
                 if (j - (k-i) >= 0) table[k][j-(k-i)] += 1;
@@ -48,7 +46,7 @@ public:
 
             for (int k = 0; k < n; k++) dfs(i+1, k);
 
-            for (int k = 0; k < n; k++) if (k != j) table[i][k] -= 1;
+            // for (int k = 0; k < n; k++) if (k != j) table[i][k] -= 1;
             for (int k = i+1; k < n; k++) table[k][j] -= 1;
             for (int k = i+1; k < n; k++){
                 if (j - (k-i) >= 0) table[k][j-(k-i)] -= 1;
@@ -61,7 +59,6 @@ public:
 
     vector<vector<string>> solveNQueens(int _n) {
         n = _n;
-
         table = vector<vector<int>>(n, vector<int>(n, 0));
         // for (auto i : table) for (auto j : i) cout << j << " ";
         
