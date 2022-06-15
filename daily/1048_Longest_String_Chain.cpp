@@ -52,18 +52,3 @@ int main(){
     cout << S.longestStrChain(words) << endl;
     return 0;
 }
-
-
-// "gr","ks"
-// "kss","gru"
-// "czvh","gruj","kssq",
-// "ksqsq","grukj","zczvh",
-// "zcpzvh","grukmj","ksqvsq",
-// "zczpzvh","grukkmj","ksqvsyq"
-// "zczpzvhx",
-// "zczpzvdhx",
-// "zczpzfvdhx",
-
-
-
-
