@@ -88,8 +88,8 @@ public:
 };
 
 int main(){
-    // vector<int> node = {0,0,-1,0,0};
-    vector<int> node = {0,0,-1,0,-1,0,-1,-1,0};
+    vector<int> node = {0,0,-1,0,0};
+    // vector<int> node = {0,0,-1,0,-1,0,-1,-1,0};
 
     TreeNode* root = CreateTree(node);
     Solution S;
