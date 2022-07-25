@@ -53,8 +53,8 @@ public:
 };
 
 int main(){
-    // vector<int> nums = {5,2,6,1};
-    vector<int> nums = {-1,-1};
+    vector<int> nums = {5,2,6,1};
+    // vector<int> nums = {-1,-1};
     Solution S;
     vector<int> ans = S.countSmaller(nums);
     for (auto i : ans) cout << i << " ";
