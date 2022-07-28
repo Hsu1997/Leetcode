@@ -90,7 +90,7 @@ int main(){
     vector<int> node = {3,5,1,6,2,0,8,-1,-1,7,4};
     TreeNode* root = create(node);
     TreeNode* p = find(root, 5);
-    TreeNode* q = find(root, 4);
+    TreeNode* q = find(root, 1);
     Solution S;
     TreeNode* target = S.lowestCommonAncestor(root, p, q);
     cout << target->val << endl;
