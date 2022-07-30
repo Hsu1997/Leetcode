@@ -21,9 +21,10 @@ public:
             vector<int> temp(26,0);
             for (auto j : w) temp[j-'a']++;
             for (int k = 0; k < 26; k++){
-                if (temp[k] < limit[k]) break;
-                if (k == 25) ans.push_back(w);
+                if (temp[k] < limit[k]) goto search;
             }
+            ans.push_back(w);
+            search : ;
         }
         
         return ans;
