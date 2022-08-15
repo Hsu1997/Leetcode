@@ -18,16 +18,11 @@ public:
 
         if (s.length() == 0) return 0;
         int ans = 0;
-        int temp = m[s[0]];
-        for (int i = 1; i < s.length(); i++){
-            if (temp < m[s[i]]) temp = m[s[i]] - temp;
-            else{
-                // cout << temp << " ";
-                ans += temp;
-                temp = m[s[i]];
-            }
+        for (int i = 0; i < s.length()-1; i++){
+            if (m[s[i]] < m[s[i+1]]) ans -= m[s[i]];
+            else ans += m[s[i]];
         }
-        ans += temp;
+        ans += m[s[s.length()-1]];
         return ans;
     }
 };
