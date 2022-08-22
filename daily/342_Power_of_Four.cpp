@@ -5,6 +5,12 @@ using namespace std;
 class Solution {
 public:
     bool isPowerOfFour(int n) {
+        // one-line solution
+        // return n > 0 && (n & (n-1)) == 0 && n & 0x55555555;
+        // n > 0
+        // n is pow of 2
+        // set bit is at odd position
+
         if (n <= 0) return false;
 
         while(n > 1){
