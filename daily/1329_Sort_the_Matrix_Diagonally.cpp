@@ -8,51 +8,21 @@ public:
     vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {
         int m = mat.size();
         int n = mat[0].size();
+        vector<int> temp;
 
         if (m == 1 || n == 1) return mat;
 
-        for (int k = m - 1; k >= 0; k--){
-            vector<int> temp;
-            int i = k;
-            int j = 0;
-            int c = 0;
-            while(i < m && j < n){
-                temp.push_back(mat[i][j]);
-                i++,j++,c++;
-            }
+        for (int r = 0; r < m; r++){
+            temp.clear();
+            for (int i = r, j = 0; i < m && j < n; i++, j++) temp.push_back(mat[i][j]);
             sort(temp.begin(), temp.end());
-
-            // for (auto q : temp) cout << q << " ";
-            // cout << endl;
-
-            i = k;
-            j = 0;
-            for (int l = 0; l < c; l++){
-                mat[i][j] = temp[l];
-                i++,j++;
-            }
+            for (int i = r, j = 0; i < m && j < n; i++, j++) mat[i][j] = temp[j];
         }
-        
-        for (int k = 1; k < n; k++){
-            vector<int> temp;
-            int i = 0;
-            int j = k;
-            int c = 0;
-            while(i < m && j < n){
-                temp.push_back(mat[i][j]);
-                i++,j++,c++;
-            }
+        for (int c = 1; c < n; c++){
+            temp.clear();
+            for (int i = 0, j = c; i < m && j < n; i++, j++) temp.push_back(mat[i][j]);
             sort(temp.begin(), temp.end());
-
-            // for (auto q : temp) cout << q << " ";
-            // cout << endl;
-            
-            i = 0;
-            j = k;
-            for (int l = 0; l < c; l++){
-                mat[i][j] = temp[l];
-                i++,j++;
-            }
+            for (int i = 0, j = c; i < m && j < n; i++, j++) mat[i][j] = temp[i];
         }
         return mat;
     }
