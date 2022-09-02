@@ -36,14 +36,13 @@ public:
         Pacific = vector<vector<bool>>(m, vector<bool>(n, 0));
         Atlantic = vector<vector<bool>>(m, vector<bool>(n, 0));
 
-        for (int i = 0; i < n; i++) Pacific[0][i] = 1, Atlantic[m-1][i] = 1;
-        for (int i = 0; i < m; i++) Pacific[i][0] = 1, Atlantic[i][n-1] = 1;
-
+        for (int i = 0; i < n; i++){
+            dfs(Pacific, 0, i);
+            dfs(Atlantic, m-1, i);
+        }
         for (int i = 0; i < m; i++){
-            for (int j = 0; j < n; j++){
-                if (Pacific[i][j] == 1 ) dfs(Pacific, i, j);
-                if (Atlantic[i][j] == 1) dfs(Atlantic, i, j);
-            }
+            dfs(Pacific, i, 0);
+            dfs(Atlantic, i, n-1);
         }
 
         for (int i = 0; i < m; i++){
@@ -57,8 +56,8 @@ public:
 };
 
 int main(){
-    // vector<vector<int>> heights = {{1,2,2,3,5},{3,2,3,4,4},{2,4,5,3,1},{6,7,1,4,5},{5,1,1,2,4}};
-    vector<vector<int>> heights = {{1}};
+    vector<vector<int>> heights = {{1,2,2,3,5},{3,2,3,4,4},{2,4,5,3,1},{6,7,1,4,5},{5,1,1,2,4}};
+    // vector<vector<int>> heights = {{1}};
     Solution S;
     vector<vector<int>> ans = S.pacificAtlantic(heights);
     for (auto i : ans){
