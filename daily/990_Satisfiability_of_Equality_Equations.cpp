@@ -45,8 +45,8 @@ public:
 int main(){
     // vector<string> equations = {"a==b","b!=a"};
     // vector<string> equations = {"a==b","b==a"};
-    // vector<string> equations = {"x==d","i==p","k!=i","m==c","w!=a","c==v","y==l","h==t","m==c","q!=w","l==k","b!=e","h==x","n!=b"};
-    vector<string> equations = {"f==a","a==b","f!=e","a==c","b==e","c==f"};
+    vector<string> equations = {"x==d","i==p","k!=i","m==c","w!=a","c==v","y==l","h==t","m==c","q!=w","l==k","b!=e","h==x","n!=b"};
+    // vector<string> equations = {"f==a","a==b","f!=e","a==c","b==e","c==f"};
     Solution S;
     cout << S.equationsPossible(equations) << endl;
     return 0;
