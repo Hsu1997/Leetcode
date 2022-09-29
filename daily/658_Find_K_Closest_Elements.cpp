@@ -9,8 +9,7 @@ public:
         if (arr.size() == k) return arr;
 
         vector<int> ans;
-        int i = 0;
-        while(i < arr.size() && arr[i] < x) i++;
+        int i = lower_bound(arr.begin(), arr.end(), x) - arr.begin();
         int j = i - 1;
         // cout << j << " " << i << endl;
         while(ans.size() < k && j >= 0 && i < arr.size()){
