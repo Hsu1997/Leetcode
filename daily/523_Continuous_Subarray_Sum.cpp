@@ -27,16 +27,16 @@ public:
 };
 
 int main(){
-    vector<int> nums = {23,2,4,6,7};
-    int k = 6;
+    // vector<int> nums = {23,2,4,6,7};
+    // int k = 6;
     // vector<int> nums = {23,2,6,4,7};
     // int k = 6;
     // vector<int> nums = {23,2,6,4,7};
     // int k = 13;
     // vector<int> nums = {1,0,1,0,1};
     // int k = 4;
-    // vector<int> nums = {23,3,3};
-    // int k = 6;
+    vector<int> nums = {23,3,3};
+    int k = 6;
     Solution S;
     cout << S.checkSubarraySum(nums, k) << endl;
     return 0;
