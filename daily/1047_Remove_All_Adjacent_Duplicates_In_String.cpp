@@ -21,8 +21,8 @@ public:
 
 int main(){
     Solution S;
-    string s = "abbaca";
-    // string s = "azxxzy";
+    // string s = "abbaca";
+    string s = "azxxzy";
     cout << S.removeDuplicates(s) << endl;
     return 0;
 }
