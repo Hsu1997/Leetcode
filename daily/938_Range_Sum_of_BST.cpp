@@ -23,12 +23,12 @@ TreeNode* create(vector<int> node){
     while(!que.empty()){
         TreeNode* temp = que.front();
         que.pop();
-        if (i < node.size()){
+        if (i < node.size() && node[i] != -1){
             temp->left = new TreeNode(node[i]);
             que.push(temp->left);
         }
         i++;
-        if (i < node.size()){
+        if (i < node.size() && node[i] != -1){
             temp->right = new TreeNode(node[i]);
             que.push(temp->right);
         }
