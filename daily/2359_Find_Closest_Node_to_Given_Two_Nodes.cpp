@@ -74,5 +74,3 @@ int main(){
     cout << S.closestMeetingNode(edges, node1, node2) << endl;
     return 0;
 }
-
-// 230125
