@@ -25,15 +25,14 @@ public:
         
         while(r < n){
             while(fruits[l] == lnum){
-                if (fruits[l] == lnum) lacc--;
-                else racc--;
+                lacc--;
                 l++;
             }
             swap(lnum, rnum);
             swap(lacc, racc);
             if (racc == 0){
                 r++;
-                if (r == n) return max(ans, r-l);
+                if (r == n) return ans;
                 racc = 1;
                 rnum = fruits[r];
             }
