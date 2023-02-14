@@ -5,36 +5,73 @@ using namespace std;
 
 class Solution {
 public:
-    static bool mycompare(pair<int,int> a, pair<int,int> b){
-        if (a.first != b.first) return a.first < b.first;
-        else return a.second < b.second;
+    // static bool mycompare(pair<int,int> a, pair<int,int> b){
+    //     if (a.first != b.first) return a.first < b.first;
+    //     else return a.second < b.second;
+    // }
+
+    // int bestTeamScore(vector<int>& scores, vector<int>& ages) {
+    //     int n = scores.size();
+    //     vector<int> dp(n,0);
+    //     vector<pair<int,int>> player;
+    //     for (int i = 0; i < n; i++){
+    //         player.push_back({ages[i],scores[i]});
+    //     }
+    //     sort(player.begin(), player.end(), mycompare);
+    //     // for (auto i : player) cout << i.first << " " << i.second << endl;
+
+    //     int max_ans = 0;
+    //     for (int i = 0; i < n; i++){
+    //         int threshold = player[i].second;
+    //         int take = 0;
+    //         for (int j = 0; j < i; j++){
+    //             if (player[j].second <= threshold) take = max(take, dp[j]);
+    //         }
+    //         dp[i] = take + threshold;
+    //         max_ans = max(max_ans, dp[i]);
+    //     }
+
+    //     // for (auto i : dp) cout << i << " ";
+    //     // cout << endl;
+        
+    //     return max_ans;
+    // }
+
+    int query(vector<int>& BIT, int score){
+        int ans = INT_MIN;
+        for (int i = score; i > 0; i -= i & (-i)){
+            ans = max(ans, BIT[i]);
+        }
+        return ans;
     }
 
+    void update(vector<int>& BIT, int score, int CurrentBest){
+        for (int i = score; i < BIT.size(); i += i & (-i)){
+            BIT[i] = max(BIT[i], CurrentBest);
+        }
+    }
+
+
     int bestTeamScore(vector<int>& scores, vector<int>& ages) {
+        int ans = 0;
         int n = scores.size();
-        vector<int> dp(n,0);
+        int highest_score = 0;
         vector<pair<int,int>> player;
         for (int i = 0; i < n; i++){
             player.push_back({ages[i],scores[i]});
+            highest_score = max(highest_score, scores[i]);
         }
-        sort(player.begin(), player.end(), mycompare);
-        // for (auto i : player) cout << i.first << " " << i.second << endl;
-
-        int max_ans = 0;
-        for (int i = 0; i < n; i++){
-            int threshold = player[i].second;
-            int take = 0;
-            for (int j = 0; j < i; j++){
-                if (player[j].second <= threshold) take = max(take, dp[j]);
-            }
-            dp[i] = take + threshold;
-            max_ans = max(max_ans, dp[i]);
-        }
-
-        // for (auto i : dp) cout << i << " ";
-        // cout << endl;
+        sort(player.begin(), player.end());
         
-        return max_ans;
+        vector<int> BIT(highest_score+1, 0);
+        for (int i = 0; i < n; i++){
+            int temp_age = player[i].first;
+            int temp_score = player[i].second;
+            int CurrentBest = temp_score + query(BIT, temp_score);
+            update(BIT, temp_score, CurrentBest);
+            ans = max(ans, CurrentBest);
+        }
+        return ans;
     }
 };
 
