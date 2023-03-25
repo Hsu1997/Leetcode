@@ -26,7 +26,7 @@ public:
         else if (rank[i] > rank[j]) parents[j] = i;
         else{
             parents[j] = i;
-            rank[j]++;
+            rank[i]++;
         }
     }
 
