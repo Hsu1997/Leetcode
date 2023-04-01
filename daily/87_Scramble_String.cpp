@@ -28,13 +28,11 @@ public:
         // }
         // cout << endl;
         for (int l = 2; l <= n; l++){
-            for (int i = 0; i < n; i++){
-                for (int j = 0; j < n; j++){
+            for (int i = 0; i < n + 1 - l; i++){
+                for (int j = 0; j < n + 1 - l; j++){
                     for (int b = 1; b < l; b++){
-                        if (i+b < n && j+ b <n){
-                            dp[i][j][l] = dp[i][j][l] || (dp[i][j][b] && dp[i+b][j+b][l-b]);
-                        }
-                        if (j+b < n && i+l-b < n) dp[i][j][l] = dp[i][j][l] || (dp[i][j+b][l-b] && dp[i+l-b][j][b]);
+                        dp[i][j][l] = dp[i][j][l] || (dp[i][j][b] && dp[i+b][j+b][l-b]);
+                        dp[i][j][l] = dp[i][j][l] || (dp[i][j+b][l-b] && dp[i+l-b][j][b]);
                         if (dp[i][j][l]) break;
                     }
                     // cout << dp[i][j][1] << " ";
