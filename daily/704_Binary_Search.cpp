@@ -6,13 +6,13 @@ using namespace std;
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        int left = 0;
-        int right = nums.size()-1;
-        while(left <= right){
-            int pivot = left + (right - left) / 2;
-            if (nums[pivot] == target) return pivot;
-            if (nums[pivot] < target) left = pivot + 1;
-            if (nums[pivot] > target) right = pivot - 1;
+        int h = 0;
+        int t = nums.size();
+        while (h < t){
+            int mid = h + (t - h) / 2;
+            if (nums[mid] == target) return mid;
+            else if (nums[mid] < target) h = mid + 1;
+            else t = mid;
         }
         return -1;
     }
