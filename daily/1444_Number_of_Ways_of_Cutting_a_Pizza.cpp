@@ -32,12 +32,6 @@ public:
         //     for (auto j : i) cout << j << " ";
         //     cout << endl;
         // }
-
-        for (int i = 0; i < m; i++){
-            for (int j = 0; j < n; j++){
-                if (count[i][j]) dp[1][i][j] = 1;
-            }
-        }
         // cout << "cut = " << 1 << " : " << endl;
         // for (auto i : dp[1]){
         //     for (auto j : i) cout << j << " ";
@@ -67,7 +61,6 @@ public:
             //     cout << endl;
             // }
         }
-
         return dp[k][0][0];
     }
 };
