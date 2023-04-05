@@ -27,6 +27,11 @@ public:
                 count[i][j] += count[i+1][j];
             }
         }
+        for (int i = 0; i < m; i++){
+            for (int j = 0; j < n; j++){
+                dp[0][i][j] = (count[i][j] > 0);
+            }
+        }
         // cout << "apple account  : " << endl;
         // for (auto i : count){
         //     for (auto j : i) cout << j << " ";
@@ -37,19 +42,19 @@ public:
         //     for (auto j : i) cout << j << " ";
         //     cout << endl;
         // }
-        if (k == 1) return count[0][0] > 0;
-        for (int cut = 2; cut <= k; cut++){
+        // if (k == 1) return count[0][0] > 0;
+        for (int cut = 1; cut < k; cut++){
             for (int i = 0; i < m; i++){
                 for (int j = 0; j < n; j++){
                     // cut horizontal
                     for (int x = i; x < m-1; x++){
-                        if (count[i][j] > count[x+1][j] && count[x+1][j]) dp[cut][i][j] += (cut == 2)? 1 : dp[cut-1][x+1][j] % mod;
+                        if (count[i][j] > count[x+1][j]) dp[cut][i][j] += dp[cut-1][x+1][j] % mod;
                         dp[cut][i][j] %= mod;
                         // if (cut == 2 && i == 0 && j == 3 && count[x][j] > count[x+1][j] && count[x+1][j]) cout << "cut horizontal between " << x << " and " << x+1 << ", +" << dp[cut-1][x+1][j] << endl; 
                     }
                     // cut vertical
                     for (int y = j; y < n-1; y++){
-                        if (count[i][j] > count[i][y+1] && count[i][y+1]) dp[cut][i][j] += (cut == 2)? 1 : dp[cut-1][i][y+1] % mod;
+                        if (count[i][j] > count[i][y+1]) dp[cut][i][j] += dp[cut-1][i][y+1] % mod;
                         // if (cut == 2 && i == 0 && j == 3 && count[i][y] > count[i][y+1] && count[i][y+1]) cout << "cut vertical between " << y << " and " << y+1 << ", +" << dp[cut-1][i][y+1] << endl; 
                         dp[cut][i][j] %= mod;
                     }
@@ -61,7 +66,7 @@ public:
             //     cout << endl;
             // }
         }
-        return dp[k][0][0];
+        return dp[k-1][0][0];
     }
 };
 
