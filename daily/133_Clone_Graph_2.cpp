@@ -33,7 +33,7 @@ public:
         Node* c = new Node(node->val);
         m[node] = c;
         for (Node* i : node->neighbors){
-            if (!m.count(i)) m[i] = cloneNode(i);
+            if (!m.count(i)) cloneNode(i);
             c->neighbors.push_back(m[i]);
         }
         return c;
