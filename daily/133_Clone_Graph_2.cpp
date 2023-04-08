@@ -27,21 +27,20 @@ public:
 
 class Solution {
 public:
-    unordered_map<Node*, Node*> m;
-    
-    Node* cloneNode(Node* node){
+    Node* cloneNode(Node* node, unordered_map<Node*, Node*>& m){
         Node* c = new Node(node->val);
         m[node] = c;
         for (Node* i : node->neighbors){
-            if (!m.count(i)) cloneNode(i);
+            if (!m.count(i)) cloneNode(i, m);
             c->neighbors.push_back(m[i]);
         }
         return c;
     }
 
     Node* cloneGraph(Node* node) {
+        unordered_map<Node*, Node*> m;
         if (!node) return node;
-        return cloneNode(node);
+        return cloneNode(node, m);
     }
 
     void print_graph(Node* node){
