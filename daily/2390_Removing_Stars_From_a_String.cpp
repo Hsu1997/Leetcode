@@ -1,14 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <stack>
+
 using namespace std;
 
 class Solution {
 public:
     string removeStars(string s) {
         int acc = 0;
-        stack<char> sta;
         string ans;
         for (auto i : s){
             if (i == '*'){
