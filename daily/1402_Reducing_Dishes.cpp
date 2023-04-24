@@ -21,9 +21,9 @@ public:
 };
 
 int main(){
-    vector<int> satisfaction = {-1,-8,0,5,-9};
+    // vector<int> satisfaction = {-1,-8,0,5,-9};
     // vector<int> satisfaction = {4,3,2};
-    // vector<int> satisfaction = {-1,-4,-5};
+    vector<int> satisfaction = {-1,-4,-5};
     Solution S;
     cout << S.maxSatisfaction(satisfaction) << endl;
     return 0;
