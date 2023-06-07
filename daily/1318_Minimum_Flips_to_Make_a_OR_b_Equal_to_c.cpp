@@ -8,7 +8,9 @@ public:
     int minFlips(int a, int b, int c) {
         int ans = 0;
         while(a > 0 || b > 0 || c > 0){
-            if (c % 2) if (a % 2 == 0 && b % 2 == 0) ans++;
+            if (c % 2){
+                if (a % 2 == 0 && b % 2 == 0) ans++;
+            }
             else ans += (a % 2 == 1) + (b % 2 == 1);
             c /= 2, b /= 2, a /= 2;
         }
