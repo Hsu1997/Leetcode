@@ -12,12 +12,12 @@ public:
         for (int diff = 1; diff < n; diff++){
             // for (auto i : dp) cout << i << " ";
             // cout << endl;
-            vector<int> temp(n,0);
+            // vector<int> temp(n,0);
             for (int left = 0; left < n - diff; left++){
                 int right = left + diff;
-                temp[left] = max(nums[left] - dp[left+1], nums[right] - dp[left]);
+                dp[left] = max(nums[left] - dp[left+1], nums[right] - dp[left]);
             }
-            swap(temp, dp);
+            // swap(temp, dp);
         }
         // for (auto i : dp) cout << i << " ";
         // cout << endl;
