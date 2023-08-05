@@ -7,7 +7,7 @@ class Solution {
 public:
     long long maxRunTime(int n, vector<int>& batteries) {
         long total_energy = 0;
-        for (auto i : batteries) total_energy += i;
+        for (long i : batteries) total_energy += i;
         long left = 1;
         long right = total_energy / n;
         
@@ -18,6 +18,7 @@ public:
             if (consume >= n * mid) left = mid;
             else right = mid-1;
         }
+
         return left;
     }
 };
