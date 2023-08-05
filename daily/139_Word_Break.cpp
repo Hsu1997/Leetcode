@@ -5,12 +5,13 @@
 
 using namespace std;
 
+struct trie{
+    unordered_map<int,trie*> m;
+    bool is_word = false;
+};
+
 class Trie {
 public:
-    struct trie{
-        unordered_map<int,trie*> m;
-        bool is_word = false;
-    };
     
     trie* root = new trie();
 
@@ -40,8 +41,14 @@ public:
         for (string s : wordDict) T.insert_word(s);
         vector<bool> dp(s.length(), false);
         for (int i = 0; i < s.length(); i++){
-            for (int j = i; j < s.length(); j++){
-                if (i == 0 || dp[i-1]) dp[j] = dp[j] || T.find_word(s.substr(i, j-i+1));
+            if (i == 0 || dp[i-1]){
+                trie* temp = T.root;
+                for (int j = i; j < s.length(); j++){
+                    if (!temp->m.count(s[j]-'a')) break;
+                    temp = temp->m[s[j]-'a'];
+                    if (temp->is_word) dp[j] = true;
+                }
+
             }
         }
         return dp[s.length()-1];
