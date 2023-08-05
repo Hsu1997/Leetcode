@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <map>
 
 using namespace std;
 
@@ -57,23 +58,25 @@ void print_tree(TreeNode* root){
 
 class Solution {
 public:
+    map<pair<int,int>, vector<TreeNode*>> m;
+    
     vector<TreeNode*> slove(int start, int end){
         vector<TreeNode*> ans;
         if (start > end){
             ans.push_back(nullptr);
             return ans;
         }
+        if (m.count({start,end})) return m[{start,end}];
 
         for (int i = start; i <= end; i++){
             for (auto left_tree : slove(start, i-1)){
                 for (auto right_tree : slove(i+1, end)){
-                    TreeNode* root = new TreeNode(i);
-                    root->left = left_tree;
-                    root->right = right_tree;
+                    TreeNode* root = new TreeNode(i, left_tree, right_tree);
                     ans.push_back(root);
                 }
             }
         }
+        m[{start,end}] = ans;
         return ans;
     }
 
