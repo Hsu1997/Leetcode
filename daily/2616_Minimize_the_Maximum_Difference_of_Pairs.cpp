@@ -15,6 +15,7 @@ public:
         }
         return false;
     }
+    
     int minimizeMax(vector<int>& nums, int p) {
         sort(nums.begin(), nums.end());
         // for (auto i : nums) cout << i << " ";
