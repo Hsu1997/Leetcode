@@ -17,6 +17,7 @@ public:
                 l++;
                 continue;
             }
+            // which sorted array the pivot and target is.
             bool pivot_in_first = nums[mid] >= nums[l];
             bool target_in_first = target >= nums[l];
             if (pivot_in_first ^ target_in_first){
