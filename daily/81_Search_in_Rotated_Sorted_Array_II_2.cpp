@@ -18,6 +18,7 @@ public:
                 continue;
             }
             // which sorted array the pivot and target is.
+            // We not sure is there exist in second array or not, but >= can ensure it exist in first array.
             bool pivot_in_first = nums[mid] >= nums[l];
             bool target_in_first = target >= nums[l];
             if (pivot_in_first ^ target_in_first){
