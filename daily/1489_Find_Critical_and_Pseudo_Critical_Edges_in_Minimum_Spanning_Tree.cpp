@@ -22,7 +22,7 @@ public:
 
 class Solution {
 public:
-    static bool compare(vector<int> a, vector<int> b){
+    static bool compare(vector<int>& a, vector<int>& b){
         return a[2] < b[2];
     }
 
