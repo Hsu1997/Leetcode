@@ -22,9 +22,9 @@ public:
 };
 
 int main(){
-    // string s = "abab";
+    string s = "abab";
     // string s = "aba";
-    string s = "abcabcabcabc";
+    // string s = "abcabcabcabc";
     Solution S;
     cout << S.repeatedSubstringPattern(s) << endl;
     return 0;
