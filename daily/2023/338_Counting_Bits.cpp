@@ -6,16 +6,19 @@ using namespace std;
 class Solution {
 public:
     vector<int> countBits(int n) {
-        if (n == 0) return {0};
-        vector<int> ans = {0,1};
-        int pow = 1;
-        while((1 << pow) <= n){
-            int k = ans.size();
-            for (int i = 0; i < k; i++){
-                if (ans.size() == n+1) return ans;
-                ans.push_back(ans[i]+1);
+        vector<int> ans(n+1, 0);
+        int pow = 0;
+        for (int i = 1; i <= n; i++){
+            // cout << "i = " << i << " ";
+            if (i == (1<<(pow+1))){
+                ans[i] = 1;
+                pow++;
+                // cout << "ans = 1, pow = " << pow << endl;
             }
-            pow++;
+            else{
+                ans[i] = ans[i-(1<<pow)]+1;
+                // cout << "ans = " << ans[i] << ", num " << i << "-" << (1<<pow) << " +1" << endl;
+            }
         }
         return ans;
     }
