@@ -20,7 +20,7 @@ public:
 
 int main(){
     int m = 3;
-    int n = 2;
+    int n = 7;
     Solution S;
     cout << S.uniquePaths(m, n) << endl;
     return 0;
