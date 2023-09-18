@@ -25,12 +25,12 @@ public:
 };
 
 int main(){
-    // vector<vector<int>> mat = {{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}};
-    // int k = 3;
+    vector<vector<int>> mat = {{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}};
+    int k = 3;
     // vector<vector<int>> mat = {{1,0,0,0},{1,1,1,1},{1,0,0,0},{1,0,0,0}};
     // int k = 2;
-    vector<vector<int>> mat = {{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1}};
-    int k = 3;
+    // vector<vector<int>> mat = {{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1}};
+    // int k = 1;
     Solution S;
     vector<int> ans = S.kWeakestRows(mat, k);
     for (auto& i : ans) cout << i << " ";
