@@ -7,13 +7,11 @@ using namespace std;
 class Solution {
 public:
     bool isSubsequence(string s, string t) {
-        int i = 0;
-        int j = 0;
-        while(i < s.length() && j < t.length()){
-            if (s[i] == t[j]) i++, j++;
-            else j++;
+        auto i = s.begin();
+        for (auto& c : t){
+            if (*i == c) i++;
         }
-        return (i == s.length());
+        return (i == s.end());
     }
 };
 
