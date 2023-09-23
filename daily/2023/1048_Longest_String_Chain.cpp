@@ -18,7 +18,7 @@ public:
                 int now_length = (c[s])? c[s] : 1;
                 for (int k = 0; k < s.length(); k++){
                     string predecessor = s.substr(0,k) + s.substr(k+1);
-                    if (m[i-1].count(predecessor)){
+                    if (m[i-1].count(predecessor) && now_length >= c[predecessor]){
                         c[predecessor] = now_length + 1;
                         ans = max(ans, c[predecessor]);
                     }
