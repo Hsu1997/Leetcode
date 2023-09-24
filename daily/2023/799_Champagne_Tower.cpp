@@ -7,10 +7,12 @@ class Solution {
 public:
     double champagneTower(int poured, int query_row, int query_glass) {
         vector<double> dp(query_row + 1);
+        vector<double> temp(query_row + 1);
         dp[0] = (double)poured;
         for (int i = 1; i <= query_row; i++){
-            vector<double> temp(query_row + 1, 0);
+            temp[0] = 0;
             for (int j = 0; j < i; j++){
+                temp[j+1] = 0;
                 if (dp[j] > 1){
                     temp[j] += (dp[j]-1)/2;
                     temp[j+1] += (dp[j]-1)/2;
