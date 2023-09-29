@@ -9,7 +9,7 @@ public:
     int mod = 1e9+7;
     vector<vector<long>> permutation;
     
-    int dfs(vector<int>& nums){
+    long dfs(vector<int>& nums){
         int m = nums.size();
         if (m < 3) return 1;
         long ans = 1;
