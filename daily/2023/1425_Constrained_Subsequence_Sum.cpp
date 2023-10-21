@@ -8,7 +8,7 @@ class Solution {
 public:
     int constrainedSubsetSum(vector<int>& nums, int k) {
         int n = nums.size();
-        vector<int> dp(n, INT_MIN);
+        vector<int> dp(n);
         dp[0] = nums[0];
         // int prev = 0;
         priority_queue<pair<int,int>, vector<pair<int,int>>, less<pair<int,int>>> pq;
