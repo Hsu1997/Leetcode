@@ -10,7 +10,6 @@ public:
         int n = nums.size();
         vector<int> dp(n);
         dp[0] = nums[0];
-        // int prev = 0;
         priority_queue<pair<int,int>, vector<pair<int,int>>, less<pair<int,int>>> pq;
         pq.push({nums[0], 0});
         int ans = nums[0];
