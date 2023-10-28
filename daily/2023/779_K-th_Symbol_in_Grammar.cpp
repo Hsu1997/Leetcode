@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
     int kthGrammar(int n, int k) {
-        // return __builtin_popcount(k-1) > 0;
+        // return __builtin_popcount(k-1) % 2 > 0;
         int count = 0;
         k--;
         while(k > 0){
