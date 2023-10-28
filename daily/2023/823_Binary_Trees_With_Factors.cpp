@@ -17,8 +17,7 @@ public:
         for (int i = 0; i < n; i++){
             for (int j = 0; j < i; j++){
                 if ((long)arr[j] * arr[j] > arr[i]) break;
-                if ((long)arr[j] * arr[j] == arr[i] && m.find(arr[i]/arr[j]) != m.end())                    dp[i] = (dp[i] + 1 * dp[j] * dp[j]) % mod;
-                else if (arr[i]  % arr[j] == 0 && m.find(arr[i]/arr[j]) != m.end()) dp[i] = (dp[i] + (1+((long)arr[j] * arr[j] != arr[i])) * dp[j] * dp[m[arr[i]/arr[j]]]) % mod;
+                else if (arr[i] % arr[j] == 0 && m.find(arr[i]/arr[j]) != m.end()) dp[i] = (dp[i] + (1+((long)arr[j] * arr[j] != arr[i])) * dp[j] * dp[m[arr[i]/arr[j]]]) % mod;
             }
         }
         for (auto i : dp) ans = (ans + i) % mod;
