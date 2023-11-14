@@ -27,9 +27,9 @@ public:
 };
 
 int main(){
-    // string s = "aabca";
+    string s = "aabca";
     // string s = "adc";
-    string s = "bbcbaba";
+    // string s = "bbcbaba";
     Solution S;
     cout << S.countPalindromicSubsequence(s) << endl;
     return 0;
