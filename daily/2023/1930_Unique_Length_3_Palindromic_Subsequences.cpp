@@ -12,15 +12,14 @@ public:
         for (int i = 0; i < 26; i++){
             char temp = 'a' + i;
             int l = 0;
-            int r = s.length();
+            int r = s.length()-1;
             while(l < r && s[l] != temp) l++;
-            if (l == r) continue;
+            if (l > r) continue;
             while(r >= 0 && s[r] != temp) r--;
-            if (r < 0) continue;
-            if (l == r) continue;
-            unordered_set<char> m;
-            for (int k = l+1; k < r; k++) m.insert(s[k]);
-            ans += m.size();
+            if (r < 0 || l == r) continue;
+            int count = 0;
+            for (int k = l+1; k < r; k++) count |= 1 << (s[k]-'a');
+            ans += (int)__builtin_popcount(count);
         }
         return ans;
     }
