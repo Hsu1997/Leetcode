@@ -30,7 +30,7 @@ public:
             pq.push(workers[i].quality);
         }
         double ans = (double)workers[k-1].wage / workers[k-1].quality * quality_acc;
-        cout << (double)workers[k-1].wage / workers[k-1].quality << " * " << quality_acc << " = " << ans << endl;
+        // cout << (double)workers[k-1].wage / workers[k-1].quality << " * " << quality_acc << " = " << ans << endl;
         for (int i = k; i < n; i++){
             quality_acc -= pq.top();
             int temp = min(workers[i].quality, pq.top());
