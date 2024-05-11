@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -7,14 +8,17 @@ class Solution {
 public:
     vector<int> kthSmallestPrimeFraction(vector<int>& arr, int k) {
         int n = arr.size();
-        vector<pair<float,vector<int>>> f;
-        for (int i =0; i < n; i++){
-            for (int j = i+1; j < n; j++) f.push_back({(float)arr[i] / arr[j], {arr[i], arr[j]}});
+        priority_queue<pair<double,pair<int,int>>,vector<pair<double,pair<int,int>>>, greater<pair<double,pair<int,int>>>> pq;
+        for (int i = 0; i < n; i++) pq.push({double(arr[i]) / arr[n-1], {i, n-1}});
+        while(--k){
+            pair<int,int> cur = pq.top().second;
+            // cout << "pop " << pq.top().first << " : (" << cur.first << "," << cur.second << ")" << endl;
+            pq.pop();
+            cur.second--;
+            // cout << "push " << double(arr[cur.first]) / arr[cur.second] << " : (" << cur.first << "," << cur.second << ")" << endl;
+            pq.push({double(arr[cur.first]) / arr[cur.second], {cur.first, cur.second}});
         }
-        sort(f.begin(), f.end());
-        // for (auto i : f) cout << i.first << " (" << i.second[0] << "," << i.second[1] << ")";
-        // cout << endl;
-        return f[k-1].second;
+        return {arr[pq.top().second.first], arr[pq.top().second.second]};
     }
 };
 
