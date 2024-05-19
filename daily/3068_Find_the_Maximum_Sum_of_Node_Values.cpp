@@ -8,18 +8,18 @@ class Solution {
 public:
     long long maximumValueSum(vector<int>& nums, int k, vector<vector<int>>& edges) {
         long long ans = 0;
-        int min_positive = INT_MAX;
-        int max_negitive = INT_MIN;
+        long long min_positive = INT_MAX;
+        long long max_negitive = INT_MIN;
         int count = 0;
         for (int i : nums){
             ans += i;
             if ((i^k) - i >= 0){
                 ans += ((i^k) - i);
                 count++;
-                min_positive = min(min_positive, (i^k) - i);
+                min_positive = min(min_positive, (long long)(i^k) - i);
             }
             else{
-                max_negitive = max(max_negitive, (i^k) - i);
+                max_negitive = max(max_negitive, (long long)(i^k) - i);
             }
             // cout << (i^k) - i << " ";
         }
