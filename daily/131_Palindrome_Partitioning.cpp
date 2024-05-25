@@ -9,7 +9,6 @@ public:
     vector<vector<string>> ans;
     
     bool is_palindrome(string& s, int i, int j){
-        // int i = 0, j = s.length()-1;
         while(i < j) if (s[i++] != s[j--]) return false;
         return true;
     }
