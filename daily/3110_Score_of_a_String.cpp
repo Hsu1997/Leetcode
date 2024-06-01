@@ -16,8 +16,8 @@ public:
 };
 
 int main(){
-    // string s = "hello";
-    string s = "aza";
+    string s = "hello";
+    // string s = "aza";
     Solution S;
     cout << S.scoreOfString(s) << endl;
     return 0;
