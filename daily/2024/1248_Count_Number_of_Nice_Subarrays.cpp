@@ -32,12 +32,12 @@ public:
 };
 
 int main(){
-    // vector<int> nums = {1,1,2,1,1};
-    // int k = 3;
+    vector<int> nums = {1,1,2,1,1};
+    int k = 3;
     // vector<int> nums = {2,4,6};
     // int k = 1;
-    vector<int> nums = {2,2,2,1,2,2,1,2,2,2};
-    int k = 2;
+    // vector<int> nums = {2,2,2,1,2,2,1,2,2,2};
+    // int k = 2;
     Solution S;
     cout << S.numberOfSubarrays(nums, k) << endl;
     return 0;
