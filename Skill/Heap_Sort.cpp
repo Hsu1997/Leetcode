@@ -27,7 +27,7 @@ void HeapSort(vector<int>& nums){
 }
 
 int main(){
-    vector<int> nums = {2,3,5,1,4,8,5,3,1,10};
+    vector<int> nums = {2,3,5,1,4,8,5,3,1,10,100,24,1,1,2};
     for (auto i : nums) cout << i << " ";
     cout << endl;
     HeapSort(nums);
