@@ -61,13 +61,6 @@ public:
  * obj->put(key,value);
  */
 
-/**
- * Your LFUCache object will be instantiated and called as such:
- * LFUCache* obj = new LFUCache(capacity);
- * int param_1 = obj->get(key);
- * obj->put(key,value);
- */
-
 int main(){
     LFUCache* lfu = new LFUCache(2);
     lfu->put(1, 1);   // cache=[1,_], cnt(1)=1
