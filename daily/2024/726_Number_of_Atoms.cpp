@@ -82,43 +82,21 @@ public:
         int mul = 1;
         int index = 0;
         while(index < formula.length()){
-            // cout << formula[index] << " : " << endl;
-            if (formula[index] == '('){
-                if (!temp_atom.empty()){
-                    int c = (temp_count.empty())? 1 : stoi(temp_count);
-                    m[temp_atom] += c * mul;
-                    temp_atom = "";
-                    temp_count = "";
-                }
-                mul *= multiply[index++];
-                // cout << "now multiply " << mul << endl;
-            }
+            if (formula[index] == '(') mul *= multiply[index++];
             else if (formula[index] == ')'){
-                if (!temp_atom.empty()){
-                    int c = (temp_count.empty())? 1 : stoi(temp_count);
-                    m[temp_atom] += c * mul;
-                    temp_atom = "";
-                    temp_count = "";
-                }
                 mul /= multiply[index++];
                 while(index < formula.length() && isdigit(formula[index])) index++;
             }
             else{
-                if (isupper(formula[index])){
-                    if (!temp_atom.empty()){
-                        int c = (temp_count.empty())? 1 : stoi(temp_count);
-                        m[temp_atom] += c * mul;
-                        temp_count = "";
-                    }
-                    temp_atom = formula[index];
-                }
-                else if (islower(formula[index])) temp_atom += formula[index];
-                else temp_count += formula[index];
-                index++;
+                temp_atom = formula[index++];
+                while(index < formula.length() && islower(formula[index])) temp_atom += formula[index++];
+                temp_count = "";
+                while(index < formula.length() && isdigit(formula[index])) temp_count += formula[index++];
+                int c = (temp_count.empty())? 1 : stoi(temp_count);
+                m[temp_atom] += c * mul;
             }
         }
-
-        if (!temp_atom.empty()) m[temp_atom] += temp_count.empty()? 1 : stoi(temp_count);
+        // if (!temp_atom.empty()) m[temp_atom] += temp_count.empty()? 1 : stoi(temp_count);
         
         map<string,int> sorted_map(m.begin(), m.end());
         string ans;
