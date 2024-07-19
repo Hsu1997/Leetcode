@@ -84,15 +84,14 @@ public:
                 }
             }
         }
-        
         return -1;
     }
 };
 
 int main(){
-    // vector<string> grid = {"@.a..","###.#","b.A.B"};
+    vector<string> grid = {"@.a..","###.#","b.A.B"};
     // vector<string> grid = {"@..aA","..B#.","....b"};
-    vector<string> grid = {"@Aa"};
+    // vector<string> grid = {"@Aa"};
     Solution S;
     cout << S.shortestPathAllKeys(grid) << endl;
     return 0;
