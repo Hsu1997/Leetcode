@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
     int maxDotProduct(vector<int>& nums1, vector<int>& nums2) {
-        // if (nums1.size() < nums2.size()) swap(nums1, nums2);
+        if (nums1.size() < nums2.size()) swap(nums1, nums2);
         int m = nums1.size();
         int n = nums2.size();
         vector<vector<int>> dp(2, vector<int>(n, 0));
