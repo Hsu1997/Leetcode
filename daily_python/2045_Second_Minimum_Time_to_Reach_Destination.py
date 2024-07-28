@@ -54,8 +54,8 @@ def readfiledata(filename):
 
 if __name__ == '__main__':
     if (len(sys.argv) == 1):
-        # currfile = os.path.basename(__file__)
-        currfile = os.path.abspath(__file__)
+        currfile = os.path.basename(__file__)
+        # currfile = os.path.abspath(__file__)
         filename = os.path.splitext(currfile)[0] + '.txt'
     else:
         filename = sys.argv[1]
@@ -67,4 +67,3 @@ if __name__ == '__main__':
         results.append(solution.secondMinimum(n, edges, time, change))
     for index, result in enumerate(results):
         print(f'Dataset {index+1} : {result}')
-    
