@@ -1,6 +1,7 @@
 import os
 import sys
 from typing import List
+import ast
 
 class Solution:
     def helper(self, index, curWidth, curHeight, totalHeight) -> None:
@@ -32,7 +33,7 @@ def openFileData(filename: str):
         for block in blocks:
             lines = block.split('\n')
             books = lines[0].split('=')[1].strip().strip(';').replace('{', '[').replace('}',']')
-            books = eval(books)
+            books = ast.literal_eval(books)
             shelfWidth = int(lines[1].split('=')[1].strip().strip(';'))
             dataset.append((books, shelfWidth))
     return dataset
