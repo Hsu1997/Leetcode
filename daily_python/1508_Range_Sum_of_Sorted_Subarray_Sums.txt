@@ -1,0 +1,14 @@
+vector<int> nums = {1,2,3,4};
+int n = 4;
+int left = 1;
+int right = 5;
+
+vector<int> nums = {1,2,3,4};
+int n = 4;
+int left = 3;
+int right = 4;
+
+vector<int> nums = {1,2,3,4};
+int n = 4;
+int left = 1;
+int right = 10
