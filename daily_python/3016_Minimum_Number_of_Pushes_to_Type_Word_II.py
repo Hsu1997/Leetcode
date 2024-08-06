@@ -1,20 +1,32 @@
 import sys
 import os
 from typing import List
+from collections import Counter
+import heapq
 
 class Solution:
     def minimumPushes(self, word: str) -> int:
-        frequency = [0] * 26
-        for c in word:
-            frequency[ord(c) - ord('a')] += 1
-        frequency.sort(reverse=True)
+        frequency_map = Counter(word)
+        frequency = [-freq for freq in frequency_map.values()]
+        heapq.heapify(frequency)
         ans = 0
-        for i in range(26):
-            if frequency[i] == 0:
-                return ans
-            else:
-                ans += (i // 8 + 1 ) * frequency[i]
+        index = 0
+        while frequency:
+            ans += (index // 8 + 1) * -heapq.heappop(frequency)
+            index += 1
         return ans
+
+        # frequency = [0] * 26
+        # for c in word:
+        #     frequency[ord(c) - ord('a')] += 1
+        # frequency.sort(reverse=True)
+        # ans = 0
+        # for i in range(26):
+        #     if frequency[i] == 0:
+        #         return ans
+        #     else:
+        #         ans += (i // 8 + 1 ) * frequency[i]
+        # return ans
     
 def readDataSet(filename):
     dataset = []
