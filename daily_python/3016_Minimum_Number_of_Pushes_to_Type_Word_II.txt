@@ -1,0 +1,3 @@
+string word = "abcde";
+string word = "xyzxyzxyzxyz";
+string word = "aabbccddeeffgghhiiiiii";
