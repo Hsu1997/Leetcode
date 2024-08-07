@@ -50,10 +50,10 @@ public:
 };
 
 int main(){
-    // int num = 123;
+    int num = 123;
     // int num = 12345;
     // int num = 1234567;
-    int num = 1234567890;
+    // int num = 1234567890;
     Solution S;
     cout << S.numberToWords(num) << endl;
     return 0;
