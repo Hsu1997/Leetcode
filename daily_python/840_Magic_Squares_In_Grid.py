@@ -7,7 +7,10 @@ class Solution:
         contain = [False] * 10
         for i in range(x, x+3):
             for j in range(y, y+3):
-                contain[grid[i][j]] = True
+                num = grid[i][j]
+                if num < 1 or num > 9 or contain[num]:
+                    return False
+                contain[num] = True
         for i in range(1,10):
             if contain[i] == False:
                 return False
