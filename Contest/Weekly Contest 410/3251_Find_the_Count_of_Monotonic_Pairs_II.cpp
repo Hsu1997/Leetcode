@@ -9,36 +9,29 @@ public:
         int M = *max_element(nums.begin(), nums.end());
         int n = nums.size();
         int MOD = 1e9+7;
-        vector<vector<int>> dp(n, vector<int>(M + 1, 0));
+        // vector<vector<int>> dp(n, vector<int>(M + 1, 0));
         vector<int> acc(M + 1, 0);
+        vector<int> temp_acc(M + 1, 0);
         int count = 0;
         for (int j = 0; j <= M; j++){
-            if (j <= nums[0]) dp[0][j] = 1;
-            count = (count + dp[0][j]) % MOD;
-            acc[j] = count;
-            // cout << dp[0][j] << " ";
+            if (j <= nums[0]) acc[j] = j + 1;
         }
-        // cout << endl;
         for (int i = 1; i < n; i++){
             count = 0;
-            vector<int> temp_acc(M + 1, 0);
+            int dp;
             for (int j = 0; j <= M; j++){
-                if (j > nums[i]) dp[i][j] = 0;
+                if (j > nums[i]) dp = 0;
                 else{
-                    int index = min({j, nums[i-1] - nums[i] + j, M});
-                    if (index < 0) dp[i][j] = 0;
-                    else dp[i][j] = acc[index];
+                    int index = min({j, nums[i-1] - (nums[i] - j), M});
+                    if (index < 0) dp = 0;
+                    else dp = acc[index];
                 }
-                // cout << dp[i][j] << " ";
-                count = (count + dp[i][j]) % MOD;
+                count = (count + dp) % MOD;
                 temp_acc[j] = count;
             }
-            acc = temp_acc;
-            // cout << endl;
+            swap(acc, temp_acc);
         }
-        int ans = 0;
-        for (int j = 0; j <= M; j++) ans = (ans + dp[n-1][j]) % MOD;
-        return ans;
+        return acc.back();
     }
 };
 

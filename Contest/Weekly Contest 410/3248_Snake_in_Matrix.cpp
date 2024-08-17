@@ -19,10 +19,10 @@ public:
 };
 
 int main(){
-    int n = 2;
-    vector<string> commands = {"RIGHT","DOWN"};
-    // int n = 3;
-    // vector<string> commands = {"DOWN","RIGHT","UP"};
+    // int n = 2;
+    // vector<string> commands = {"RIGHT","DOWN"};
+    int n = 3;
+    vector<string> commands = {"DOWN","RIGHT","UP"};
     Solution S;
     cout << S.finalPositionOfSnake(n, commands) << endl;
     return 0;
