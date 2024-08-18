@@ -12,8 +12,8 @@ public:
         dpa[0] = energyDrinkA[0];
         dpb[0] = energyDrinkB[0];
         for (int i = 1; i < n; i++){
-            dpa[i % 2] = max(energyDrinkA[i % 2] + dpa[(i + 1) % 2], dpb[(i + 1) % 2]);
-            dpb[i % 2] = max(energyDrinkB[i % 2] + dpb[(i + 1) % 2], dpa[(i + 1) % 2]);
+            dpa[i % 2] = max(energyDrinkA[i] + dpa[(i + 1) % 2], dpb[(i + 1) % 2]);
+            dpb[i % 2] = max(energyDrinkB[i] + dpb[(i + 1) % 2], dpa[(i + 1) % 2]);
         }
         return max(dpa[(n - 1) % 2], dpb[(n - 1) % 2]);
     }
