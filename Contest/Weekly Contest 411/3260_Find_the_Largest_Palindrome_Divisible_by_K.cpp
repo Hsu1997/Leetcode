@@ -16,8 +16,8 @@ public:
     string largestPalindrome(int _n, int _k) {
         n = _n, k = _k;
         if (n % 2 == 1) odd = true;
-        dp = vector<vector<int>>(n, vector<int>(k, -1));
-        track = vector<vector<int>>(n, vector<int>(k, -1));
+        dp = vector<vector<int>>(n / 2 + 1, vector<int>(k, -1));
+        track = vector<vector<int>>(n / 2 + 1, vector<int>(k, -1));
         power = vector<int>(n);
         power[0] = 1 % k;
         for (int i = 1; i < n; i++) power[i] = (power[i-1] * 10) % k;
