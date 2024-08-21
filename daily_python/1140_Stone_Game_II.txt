@@ -1,0 +1,5 @@
+vector<int> piles = {2,7,9,4,4};
+
+vector<int> piles = {1,2,3,4,5,100};
+
+vector<int> piles = {1,1,1};
