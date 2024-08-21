@@ -20,7 +20,7 @@ public:
     }
     int stoneGameII(vector<int>& piles) {
         n = piles.size();
-        vector<vector<vector<int>>> dp(2, vector<vector<int>>(n, vector<int>(2 * n, -1)));
+        vector<vector<vector<int>>> dp(2, vector<vector<int>>(n, vector<int>(n + 1, -1)));
         helper(piles, dp, 0, 0, 1);
         // for (auto i : dp[0]){
         //     for (auto j : i) cout << setw(2) <<  j <<  " ";
