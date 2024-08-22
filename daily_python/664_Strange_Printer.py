@@ -9,7 +9,6 @@ class Solution:
                 _s += s[i]
         s = _s
         n = len(s)
-        # print(f's = {s}, len = {n}')
         dp = [[n for _ in range(n)] for _ in range(n)]
         for i in range(n):
             dp[i][i] = 0
