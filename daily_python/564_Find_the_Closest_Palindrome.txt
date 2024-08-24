@@ -1,0 +1,11 @@
+string n = "123";
+
+string n = "1";
+
+string n = "989";
+
+string n = "10";
+
+string n = "11";
+
+string n = "10001";
