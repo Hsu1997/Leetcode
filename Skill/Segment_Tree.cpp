@@ -58,7 +58,7 @@ public:
         // for (auto i : P) cout << i << " ";
         // cout << endl << endl;
         SegmentTree T(P);
-        for (int power : worker) ans += T.find_max(0, power);
+        for (int power : worker) ans += T.find_max(0, min(M, power));
         return ans;
     }
 };
