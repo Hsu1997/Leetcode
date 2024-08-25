@@ -43,6 +43,67 @@ public:
     }
 };
 
+// class Solution {
+// public:
+//     bool almost_equal(int i, int j){
+//         if (i == j) return true;
+//         int s1[8] = {0};
+//         int s2[8] = {0};
+//         int cnt = 0;
+//         while(i || j){
+//             s1[cnt] = i % 10;
+//             s2[cnt] = j % 10;
+//             cnt++;
+//             i /= 10;
+//             j /= 10;
+//         }
+//         int diff[4];
+//         cnt = 0;
+//         for (int i = 0; i < 8; i++){
+//             if (s1[i] != s2[i]){
+//                 if (cnt == 4) return false;
+//                 diff[cnt++] = i;
+//             }
+//         }
+//         if (cnt == 0) return true;
+//         if (cnt == 1) return false;
+//         int a = diff[0];
+//         int b = diff[1];
+//         if (cnt == 2) return (s1[diff[0]] == s2[diff[1]]) && (s1[diff[1]] == s2[diff[0]]);
+//         int c = diff[2];
+//         if (cnt == 3){
+//             return (s1[a] == s2[b] && s1[b] == s2[c] && s1[c] == s2[a])|| 
+//                    (s1[a] == s2[c] && s1[b] == s2[a] && s1[c] == s2[b]);
+//         }
+//         int d = diff[3];
+//         if (cnt == 4){
+//             return (s1[a] == s2[b] && s1[b] == s2[a] && s1[c] == s2[d] && s1[d] == s2[c])||
+//                    (s1[a] == s2[c] && s1[c] == s2[a] && s1[b] == s2[d] && s1[d] == s2[b])||
+//                    (s1[a] == s2[d] && s1[d] == s2[a] && s1[b] == s2[c] && s1[c] == s2[b]);
+//         }
+//         return false;
+//     }
+//     int countPairs(vector<int>& nums) {
+//         int ans = 0;
+//         unordered_map<int,int> m;
+//         vector<int> v;
+//         for (int i : nums){
+//             if (m[i] == 0) v.push_back(i);
+//             m[i]++;
+//         }
+//         for (auto i : m) ans += i.second * (i.second - 1) / 2;
+//         int n = v.size();
+//         for (int i = 0; i < n; i++){
+//             for (int j = i + 1; j < n; j++){
+//                 if (almost_equal(v[i], v[j])){
+//                     ans += m[v[i]] * m[v[j]];
+//                 }
+//             }
+//         }
+//         return ans;
+//     }
+// };
+
 int main(){
     // vector<int> nums = {1023,2310,2130,213};
     // vector<int> nums = {1,10,100};
