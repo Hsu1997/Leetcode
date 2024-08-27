@@ -1,0 +1,17 @@
+int n = 3;
+vector<vector<int>> edges = {{0,1},{1,2},{0,2}};
+vector<double> succProb = {0.5,0.5,0.2};
+int start_node = 0;
+int end_node = 2;
+
+int n = 3;
+vector<vector<int>> edges = {{0,1},{1,2},{0,2}};
+vector<double> succProb = {0.5,0.5,0.3};
+int start_node = 0;
+int end_node = 2;
+
+int n = 3;
+vector<vector<int>> edges = {{0,1}};
+vector<double> succProb = {0.5};
+int start_node = 0;
+int end_node = 2;
