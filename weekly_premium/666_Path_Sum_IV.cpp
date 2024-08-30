@@ -16,11 +16,11 @@ public:
         Node(int d, int p, int v) : dep(d), pos(p), val(v), left(nullptr), right(nullptr) {}
         Node(int d, int p, int v, Node* l, Node* r) : dep(d), pos(p), val(v), left(l), right(r) {} 
     };
-    void dfs(Node* root, int acc){
+    void bfs(Node* root, int acc){
         acc += root->val;
         if (!root->left && !root->right) ans += acc;
-        if (root->left) dfs(root->left, acc);
-        if (root->right) dfs(root->right, acc);
+        if (root->left) bfs(root->left, acc);
+        if (root->right) bfs(root->right, acc);
         return;
     }
     int pathSum(vector<int>& nums) {
@@ -38,7 +38,7 @@ public:
             else que.front()->right = temp;
             que.push(temp);
         }
-        dfs(root, 0);
+        bfs(root, 0);
         return ans;
     }
 };
