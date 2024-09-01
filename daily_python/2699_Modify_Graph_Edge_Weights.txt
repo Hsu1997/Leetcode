@@ -1,0 +1,17 @@
+int n = 5;
+vector<vector<int>> edges = {{4,1,-1},{2,0,-1},{0,3,-1},{4,3,-1}};
+int source = 0;
+int destination = 1;
+int target = 5;
+
+int n = 3;
+vector<vector<int>> edges = {{0,1,-1},{0,2,5}};
+int source = 0;
+int destination = 2;
+int target = 6;
+
+int n = 4;
+vector<vector<int>> edges = {{1,0,4},{1,2,3},{2,3,5},{0,3,-1}};
+int source = 0;
+int destination = 2;
+int target = 6;
