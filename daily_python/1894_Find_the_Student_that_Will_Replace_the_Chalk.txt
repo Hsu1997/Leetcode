@@ -1,0 +1,5 @@
+vector<int> chalk = {5,1,5};
+int k = 22;
+
+vector<int> chalk = {3,4,1,2};
+int k = 25;
