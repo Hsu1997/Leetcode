@@ -1,0 +1,8 @@
+vector<int> nums = {1,2,3};
+vector<int> nodes = {1,2,3,4,5};
+
+vector<int> nums = {1};
+vector<int> nodes = {1,2,1,2,1,2};
+
+vector<int> nums = {5};
+vector<int> nodes = {1,2,3,4};
