@@ -55,10 +55,10 @@ if __name__ == '__main__':
         filename = os.path.splitext(__file__)[0] + '.txt'
     else:
         filename = sys.argv[1]
-    daataset = readDataSet(filename)
+    dataset = readDataSet(filename)
     results = []
     solution = Solution()
-    for nums, nodes in daataset:
+    for nums, nodes in dataset:
         head = create_linked_list(nodes)
         results.append(solution.modifiedList(nums, head))
     for index, result in enumerate(results):
