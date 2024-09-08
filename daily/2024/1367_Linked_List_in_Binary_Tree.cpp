@@ -60,21 +60,37 @@ TreeNode* create_tree(vector<int>& nodes){
 
 class Solution {
 public:
-    ListNode* head;
-    bool dfs(ListNode* curr_list, TreeNode* root){
-        if (curr_list == nullptr) return true;
+    bool dfs(ListNode* head, TreeNode* root) {
+        if (head == nullptr) return true;
         if (root == nullptr) return false;
-        if (curr_list->val == root->val && dfs(curr_list->next, root->left)) return true;
-        if (curr_list->val == root->val && dfs(curr_list->next, root->right)) return true;
-        if (curr_list == head && dfs(head, root->left)) return true;
-        if (curr_list == head && dfs(head, root->right)) return true;
+        if (head->val == root->val && (dfs(head->next, root->left) || dfs(head->next, root->right))) return true;
         return false;
     }
+
     bool isSubPath(ListNode* head, TreeNode* root) {
-        this->head = head;
-        return dfs(head, root);
+        if (root == nullptr) return false;
+        if (dfs(head, root)) return true;
+        return isSubPath(head, root->left) || isSubPath(head, root->right);
     }
 };
+
+// class Solution {
+// public:
+//     ListNode* head;
+//     bool dfs(ListNode* curr_list, TreeNode* root){
+//         if (curr_list == nullptr) return true;
+//         if (root == nullptr) return false;
+//         if (curr_list->val == root->val && dfs(curr_list->next, root->left)) return true;
+//         if (curr_list->val == root->val && dfs(curr_list->next, root->right)) return true;
+//         if (curr_list == head && dfs(head, root->left)) return true;
+//         if (curr_list == head && dfs(head, root->right)) return true;
+//         return false;
+//     }
+//     bool isSubPath(ListNode* head, TreeNode* root) {
+//         this->head = head;
+//         return dfs(head, root);
+//     }
+// };
 
 int main(){
     vector<int> list = {4,2,8};
