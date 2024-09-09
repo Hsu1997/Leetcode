@@ -1,0 +1,7 @@
+int m = 3;
+int n = 5;
+vector<int> nodes = {3,0,2,6,8,1,7,9,4,2,5,5,0};
+
+int m = 1;
+int n = 4;
+vector<int> nodes = {0,1,2};
