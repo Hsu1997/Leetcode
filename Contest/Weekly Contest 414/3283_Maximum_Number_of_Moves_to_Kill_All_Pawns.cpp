@@ -10,7 +10,7 @@ public:
     int n;
     int kx;
     int ky;
-    vector<vector<vector<int>>> dp;
+    vector<vector<int>> dp;
     unordered_map<int,int> chess_on_board;
     vector<vector<int>> dir = {{-1,2},{-2,1},{-2,-1},{-1,-2},{1,-2},{2,-1},{2,1},{1,2}};
     vector<vector<int>> pairs_distance;
@@ -60,26 +60,26 @@ public:
 
     int helper(int who, int starting_index, int now_chess_status){
         if (now_chess_status == 0) return 0;
-        if (dp[who][starting_index][now_chess_status] != -1) return dp[who][starting_index][now_chess_status];
+        if (dp[starting_index][now_chess_status] != -1) return dp[starting_index][now_chess_status];
         int temp_ans = (who)? 1e8 : 0;
         for (int i = 0; i < n; i++){
             if ((now_chess_status & (1 << i)) == 0) continue;
             if (who == 0) temp_ans = max(temp_ans, pairs_distance[starting_index][i] + helper(1, i, now_chess_status ^ (1 << i)));
             else temp_ans = min(temp_ans, pairs_distance[starting_index][i] + helper(0, i, now_chess_status ^ (1 << i)));
         }
-        return dp[who][starting_index][now_chess_status] = temp_ans;
+        return dp[starting_index][now_chess_status] = temp_ans;
     }
 
     int maxMoves(int kx, int ky, vector<vector<int>>& positions) {
         this->kx = kx;
         this->ky = ky;
         n = positions.size();
-        dp = vector<vector<vector<int>>>(2, vector<vector<int>>(n + 1, vector<int>(1 << n, -1)));
+        dp = vector<vector<int>>(n + 1, vector<int>(1 << n, -1));
         for (int i = 0; i < n; i++) chess_on_board[pos_to_index(positions[i][0], positions[i][1])] = i;
         int stituation = (1 << n) - 1;
         make_pairs_distance(positions);
         return helper(0, n, stituation);
-        return dp[0][n][stituation];
+        return dp[n][stituation];
     }
 };
 
