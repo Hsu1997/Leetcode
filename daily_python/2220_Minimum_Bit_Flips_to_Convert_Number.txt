@@ -1,0 +1,5 @@
+int start = 10;
+int goal = 7;
+
+int start = 3;
+int goal = 4;
