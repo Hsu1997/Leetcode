@@ -1,0 +1,5 @@
+string s1 = "this apple is sweet";
+string s2 = "this apple is sour";
+
+string s1 = "apple apple";
+string s2 = "banana";
