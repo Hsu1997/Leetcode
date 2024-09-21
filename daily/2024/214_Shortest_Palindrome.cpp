@@ -41,6 +41,7 @@ public:
 
 int main(){
     string s = "aacecaaa";
+    // string s = "abcd";
     Solution S;
     cout << S.shortestPalindrome(s) << endl;
     return 0;
