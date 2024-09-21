@@ -1,0 +1,3 @@
+string s = "aacecaaa";
+
+string s = "abcd";
