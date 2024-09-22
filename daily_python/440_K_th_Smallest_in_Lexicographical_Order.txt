@@ -1,0 +1,11 @@
+int n = 13;
+int k = 2;
+
+int n = 1;
+int k = 1;
+
+int n = 2;
+int k = 2;
+
+int n = 681692778;
+int k = 351251360;
