@@ -1,0 +1,5 @@
+vector<int> arr1 = {1,10,100};
+vector<int> arr2 = {1000};
+
+vector<int> arr1 = {1,2,3};
+vector<int> arr2 = {4,4,4};
