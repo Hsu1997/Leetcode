@@ -1,0 +1,5 @@
+string s = "leetscode";
+vector<string> dictionary = {"leet","code","leetcode"};
+
+string s = "sayhelloworld";
+vector<string> dictionary = {"hello","world"};
