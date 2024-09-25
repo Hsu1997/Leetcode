@@ -1,0 +1,3 @@
+vector<string> words = {"abc","ab","bc","b"};
+
+vector<string> words = {"abcd"};
