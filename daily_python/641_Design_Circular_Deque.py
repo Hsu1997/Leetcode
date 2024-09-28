@@ -7,7 +7,6 @@ class Node:
         self.next = next
         self.val = val
 
-
 class MyCircularDeque:
     def __init__(self, k: int):
         self.head = None
@@ -92,8 +91,6 @@ def readDataSet(filename):
             lines = block.split('\n')
             command = lines[0][2:-2].split('","')
             parameter = lines[1][2:-2].split('],[')
-            # print(command)
-            # print(parameter)
             commands = []
             for c, p in zip(command, parameter):
                 commands.append((c, int(p) if p is not '' else None))
@@ -111,7 +108,6 @@ if __name__ == '__main__':
     for problem in dataset:
         result = []
         for command, param in problem:
-            # print(command, param)
             if command == "MyCircularDeque":
                 deque = MyCircularDeque(param)
             elif command == "insertFront":
