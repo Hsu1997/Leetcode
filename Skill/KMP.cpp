@@ -34,11 +34,9 @@ void KMPSearch(const string& text, const string& pattern) {
         while (j > 0 && pattern[j] != text[i]) {
             j = lps[j - 1]; // 根據LPS陣列回溯
         }
-        
         if (pattern[j] == text[i]) {
             j++; // 匹配時增加j
         }
-
         if (j == m) {
             cout << "找到模式，起始索引：" << (i - j + 1) << endl; // 計算起始索引
             j = lps[j - 1]; // 根據LPS陣列回溯
