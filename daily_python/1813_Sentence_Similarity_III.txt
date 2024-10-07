@@ -1,0 +1,8 @@
+string sentence1 = "My name is Haley";
+string sentence2 = "My Haley";
+
+string sentence1 = "of";
+string sentence2 = "A lot of words";
+
+string sentence1 = "Eating right now";
+string sentence2 = "Eating";
