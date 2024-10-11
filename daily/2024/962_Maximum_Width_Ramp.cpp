@@ -6,23 +6,19 @@ using namespace std;
 class Solution {
 public:
     int maxWidthRamp(vector<int>& nums) {
-        if (nums.empty()) return 0;
+        int n = nums.size();
+        if (n == 0) return 0;
         int ans = 0;
-        vector<int> record = {nums[0]};
-        vector<int> index = {0};
-        for (int i = 1; i < nums.size(); i++){
-            auto it = upper_bound(record.begin(), record.end(), nums[i]);
-            if (it == record.end()) ans = i;
-            else{
-                int idx = it - record.begin();
-                if (idx == 0){
-                    record.insert(it, nums[i]);
-                    index.insert(index.begin(), i);
-                }
-                else{
-                    ans = max(ans, i - index[idx-1]);
-                }
+        vector<int> record = {nums[n-1]};
+        vector<int> index = {n-1};
+        for (int i = n-2; i >= 0; i--){
+            auto it = lower_bound(record.begin(), record.end(), nums[i]);
+            int idx = it - record.begin();
+            if (it == record.end()){
+                record.push_back(nums[i]);
+                index.push_back(i);
             }
+            else ans = max(ans, index[idx] - i);
         }
         return ans;
     }
