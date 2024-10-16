@@ -1,0 +1,5 @@
+vector<int> nums = {10,10,10,10,10};
+int k = 5;
+
+vector<int> nums = {1,10,3,3,3};
+int k = 3;
