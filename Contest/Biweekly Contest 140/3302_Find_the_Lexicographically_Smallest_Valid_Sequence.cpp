@@ -9,14 +9,14 @@ public:
     vector<int> validSequence(string word1, string word2) {
         int m = word1.length();
         int n = word2.length();
-        vector<int> last_change(n, -1);
+        vector<int> last_chance(n, -1);
         for (int i = m-1, j = n-1; i >= 0 && j >= 0; i--){
             if (word1[i] == word2[j]){
-                last_change[j] = i;
+                last_chance[j] = i;
                 j--;
             }
         }
-        // for (int i : last_change) cout << i << " ";
+        // for (int i : last_chance) cout << i << " ";
         // cout << endl;
         int pass = 0;
         vector<int> ans;
@@ -26,8 +26,7 @@ public:
                 j++;
             }
             else{
-                // If last_change[pos] != -1 guarantee behind this pos there has a solution
-                if (pass == 0 && (j == n-1 || i < last_change[j+1])){
+                if (pass == 0 && (j == n-1 || i < last_chance[j+1])){
                     ans.push_back(i);
                     j++, pass++;
                 }
