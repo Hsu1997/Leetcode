@@ -1,0 +1,11 @@
+int n = 3;
+int k = 1;
+
+int n = 4;
+int k = 11;
+
+int n = 3;
+int k = 2;
+
+int n = 4;
+int k = 12;
