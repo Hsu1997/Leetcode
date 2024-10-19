@@ -10,10 +10,10 @@ class Solution:
                 k = mid - (k - mid)
                 flip += 1
             elif k == mid:
-                return 1 if flip % 2 == 0 else 0
+                return '1' if flip % 2 == 0 else '0'
             else:
                 continue
-        return 0 if flip % 2 == 0 else 1
+        return '0' if flip % 2 == 0 else '1'
     
 def readDataSet(filename):
     dataset = []
