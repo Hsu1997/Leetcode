@@ -1,0 +1,5 @@
+string expression = "&(|(f))";
+
+string expression = "|(f,f,f,t)";
+
+string expression = "!(&(f,t))";
