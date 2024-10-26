@@ -1,0 +1,5 @@
+vector<string> floder = {"/a","/a/b","/c/d","/c/d/e","/c/f"};
+
+vector<string> floder = {"/a","/a/b/c","/a/b/d"};
+
+vector<string> floder = {"/a/b/c","/a/b/ca","/a/b/d"};
