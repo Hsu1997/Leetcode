@@ -1,0 +1,5 @@
+string sentence = "leetcode exercises sound delightful";
+
+string sentence = "eetcode";
+
+string sentence = "Leetcode is cool";
