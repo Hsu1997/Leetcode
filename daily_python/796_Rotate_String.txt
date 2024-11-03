@@ -1,0 +1,8 @@
+string s = "abcde";
+string goal = "cdeab";
+
+string s = "abcde";
+string goal = "abced";
+
+string s = "aa";
+string goal = "a";
