@@ -1,0 +1,5 @@
+int n = 3;
+int x = 4;
+
+int n = 2;
+int x = 7;
