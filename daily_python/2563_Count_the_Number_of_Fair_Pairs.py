@@ -18,8 +18,10 @@ class Solution:
                 end -= 1
             if i >= end:
                 return ans
-            start = max(start, i + 1)
-            ans += end - start + 1
+            if start <= i:
+                ans += end - i
+            else:
+                ans += end - start + 1
         return ans
     
 def readDatSet(filename):
