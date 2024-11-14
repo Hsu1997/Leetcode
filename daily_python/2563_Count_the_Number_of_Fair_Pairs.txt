@@ -1,0 +1,15 @@
+vector<int> nums = {0,1,7,4,4,5};
+int lower = 3;
+int upper = 6;
+
+vector<int> nums = {1,7,9,2,5};
+int lower = 11;
+int upper = 11;
+
+vector<int> nums = {0,0,0,0,0,0};
+int lower = 0;
+int upper = 0;
+
+vector<int> nums = {6,9,4,2,7,5,10,3};
+int lower = 13;
+int upper = 13;
