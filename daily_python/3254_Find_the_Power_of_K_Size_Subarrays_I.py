@@ -5,7 +5,7 @@ from typing import List
 class Solution:
     def resultsArray(self, nums: List[int], k: int) -> List[int]:
         n = len(nums)
-        if n == 1:
+        if k == 1:
             return nums
         ans = [-1] * (n - k + 1)
         continuous = 1
