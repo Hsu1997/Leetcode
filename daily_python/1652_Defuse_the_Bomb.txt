@@ -1,0 +1,8 @@
+vector<int> code = {5,7,1,4};
+int k = 3;
+
+vector<int> code = {1,2,3,4};
+int k = 0;
+
+vector<int> code = {2,4,9,3};
+int k = -2;
