@@ -1,0 +1,14 @@
+string s = "aabaaaacaabc";
+int k = 2;
+
+string s = "a";
+int k = 1;
+
+string s = "a";
+int k = 0;
+
+string s = "cbbac";
+int k = 1;
+
+string s = "aabbccca";
+int k = 2;
