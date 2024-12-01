@@ -37,6 +37,8 @@ public:
         if (start_node == -1) start_node = pairs[0][0];
         visit(start_node);
         reverse(result.begin(), result.end());
+        // for (auto i : result) cout << i << " ";
+        // cout << endl;
         vector<vector<int>> ans;
         int n = result.size();
         for (int i = 1; i < n; i++){
@@ -50,6 +52,8 @@ int main(){
     vector<vector<int>> pairs = {{5,1},{4,5},{11,9},{9,4}};
     // vector<vector<int>> pairs = {{1,3},{3,2},{2,1}};
     // vector<vector<int>> pairs = {{1,2},{1,3},{2,1}};
+    // vector<vector<int>> pairs = {{1,2},{2,3},{3,4},{4,5},{5,3},{3,6},{6,7}};
+    // vector<vector<int>> pairs = {{1,2},{2,3},{3,6},{6,7},{3,4},{4,5},{5,3}};
     Solution S;
     vector<vector<int>> ans = S.validArrangement(pairs);
     for (auto i : ans){
