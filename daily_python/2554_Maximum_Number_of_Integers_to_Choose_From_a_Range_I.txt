@@ -1,0 +1,11 @@
+vector<int> banned = {1,6,5};
+int n = 5;
+int maxSum = 6;
+
+vector<int> banned = {1,2,3,4,5,6,7};
+int n = 8;
+int maxSum = 1;
+
+vector<int> banned = {11};
+int n = 7;
+int maxSum = 50;
