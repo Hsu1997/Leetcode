@@ -1,0 +1,5 @@
+vector<int> gifts = {25,64,9,4,100};
+int k = 4;
+
+vector<int> gifts = {1,1,1,1};
+int k = 4;
