@@ -6,10 +6,12 @@ using namespace std;
 class Solution {
 public:
     int maximumBeauty(vector<int>& nums, int k) {
-        vector<int> count(100002, 0);
+        int maxv = 0;
+        for (int i : nums) maxv = max(i, maxv);
+        vector<int> count(maxv+1, 0);
         for (int i : nums){
             count[max(0, i-k)]++;
-            count[min(100001, i+k+1)]--;
+            if (i+k+1 <= maxv) count[i+k+1]--;
         }
         int ans = 0;
         int curr = 0;
