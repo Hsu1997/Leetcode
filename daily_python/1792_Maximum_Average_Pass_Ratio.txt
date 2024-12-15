@@ -1,0 +1,5 @@
+vector<vector<int>> classes = {{1,2},{3,5},{2,2}};
+int extraStudents = 2;
+
+vector<vector<int>> classes = {{2,4},{3,9},{4,5},{2,10}};
+int extraStudents = 4;
