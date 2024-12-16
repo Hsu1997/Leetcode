@@ -21,12 +21,12 @@ public:
 };
 
 int main(){
-    // vector<int> nums = {3,4,1,2,6};
-    // vector<vector<int>> queries = {{0,4}};
+    vector<int> nums = {3,4,1,2,6};
+    vector<vector<int>> queries = {{0,4}};
     // vector<int> nums = {4,3,1,6};
     // vector<vector<int>> queries = {{0,2},{2,3}};
-    vector<int> nums = {1};
-    vector<vector<int>> queries = {{0,0}};
+    // vector<int> nums = {1};
+    // vector<vector<int>> queries = {{0,0}};
     Solution S;
     vector<bool> ans = S.isArraySpecial(nums, queries);
     for (auto i : ans) cout << i << " ";
