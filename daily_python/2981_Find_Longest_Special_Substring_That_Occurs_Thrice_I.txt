@@ -1,0 +1,13 @@
+string s = "aaaa";
+
+string s = "abcdef";
+
+string s = "abcaba";
+
+string s = "acc";
+
+string s = "lkwwdddddnnnnnynnnnl";
+
+string s = "ceeeeeeeeeeeebmmmfffeeeeeeeeeeeewww";
+
+string s = "uuuuonmdkgqqqqqquuuu";
