@@ -8,14 +8,10 @@ public:
     int maxChunksToSorted(vector<int>& arr) {
         int n = arr.size();
         int ans = 0;
-        vector<bool> visited(n, false);
+        int status = 0;
         for (int i = 0; i < n; i++){
-            visited[arr[i]] = true;
-            bool all_contain = true;
-            for (int k = 0; k <= i; k++){
-                if (!visited[k]) all_contain = false;
-            }
-            ans += all_contain;
+            status |= (1 << arr[i]);
+            if (status == (1 << (i+1)) - 1) ans++;
         }
         return ans;
     }
