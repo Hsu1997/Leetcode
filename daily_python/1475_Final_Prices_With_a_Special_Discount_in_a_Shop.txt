@@ -1,0 +1,5 @@
+vector<int> prices = {8,4,6,2,3};
+
+vector<int> prices = {1,2,3,4,5};
+
+vector<int> prices = {10,1,1,6};
