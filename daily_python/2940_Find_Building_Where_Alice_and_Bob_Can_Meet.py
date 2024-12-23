@@ -7,7 +7,7 @@ class Solution:
         left = 0
         right = len(monotonic) - 1
         ans = -1
-        while left < right:
+        while left <= right:
             mid = (left + right) // 2
             if monotonic[mid][0] > val:
                 ans = max(ans, mid)
