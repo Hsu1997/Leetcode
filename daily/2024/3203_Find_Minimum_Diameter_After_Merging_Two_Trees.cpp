@@ -6,70 +6,48 @@ using namespace std;
 
 class Solution {
 public:
-    int find_max_diameter(vector<vector<int>>& edges){
-        int n = edges.size()+1;
-        vector<bool> visited(n, false);
+    int minimumDiameterAfterMerge(vector<vector<int>>& edges1, vector<vector<int>>& edges2) {
+        vector<vector<int>> graph1 = create_graph(edges1);
+        vector<vector<int>> graph2 = create_graph(edges2);
+        auto [f1, _d1] = bfs(graph1, 0);
+        auto [f2, _d2] = bfs(graph2, 0);
+        auto [_f1, d1] = bfs(graph1, f1);
+        auto [_f2, d2] = bfs(graph2, f2);
+        return max({d1, d2, (d1+1)/2 + (d2+1)/2 + 1});
+    }
+private:
+    vector<vector<int>> create_graph(vector<vector<int>>& edges){
+        int n = edges.size() + 1;
         vector<vector<int>> graph(n);
         for (auto& e : edges){
             graph[e[0]].push_back(e[1]);
             graph[e[1]].push_back(e[0]);
         }
-        vector<int> dis(n, -1);
-        dis[0] = 0;
-        queue<int> que;
-        que.push(0);
-        while(!que.empty()){
-            int curr = que.front();
-            que.pop();
-            for (int neighbor : graph[curr]){
-                if (dis[neighbor] == -1){
-                    dis[neighbor] = dis[curr] + 1;
-                    que.push(neighbor);
-                }
-            }
-        }
-        int start = 0;
-        int diameter = 0;
-        for (int i = 0; i < n; i++){
-            if (dis[i] > diameter){
-                start = i;
-                diameter = dis[i];
-            }
-        }
-        // for (int i : dis) cout << i << " ";
-        // cout << endl << "farest node " << start << " = " << diameter << endl;
-        // cout << "start at node " << start << endl;
-
-        dis = vector<int>(n, -1);
-        dis[start] = 0;
-        que.push(start);
-        while(!que.empty()){
-            int curr = que.front();
-            que.pop();
-            for (int neighbor : graph[curr]){
-                if (dis[neighbor] == -1){
-                    dis[neighbor] = dis[curr] + 1;
-                    que.push(neighbor);
-                }
-            }
-        }
-        start = -1;
-        diameter = 0;
-        for (int i = 0; i < n; i++){
-            if (dis[i] > diameter){
-                start = i;
-                diameter = dis[i];
-            }
-        }
-        // for (int i : dis) cout << i << " ";
-        // cout << endl << "farest node " << start << " = " << diameter << endl;
-        return diameter;
+        return graph;
     }
-
-    int minimumDiameterAfterMerge(vector<vector<int>>& edges1, vector<vector<int>>& edges2){
-        int d1 = find_max_diameter(edges1);
-        int d2 = find_max_diameter(edges2);
-        return max({d1, d2, (d1+1)/2 + (d2+1)/2 + 1});
+    pair<int,int> bfs(vector<vector<int>>& graph, int start_node){
+        int n = graph.size();
+        vector<bool> visited(n, false);
+        queue<int> que({start_node});
+        visited[start_node] = true;
+        int farest_node = -1;
+        int diameter = 0;
+        while(!que.empty()){
+            int s = que.size();
+            while(s--){
+                int curr = que.front();
+                que.pop();
+                farest_node = curr;
+                for (int neighbor : graph[curr]){
+                    if (!visited[neighbor]){
+                        visited[neighbor] = true;
+                        que.push(neighbor);
+                    }
+                }
+            }
+            if (!que.empty()) diameter++;
+        }
+        return {farest_node, diameter};
     }
 };
 
