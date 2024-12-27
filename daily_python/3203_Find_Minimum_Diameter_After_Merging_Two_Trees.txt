@@ -1,0 +1,11 @@
+vector<vector<int>> edges1 = {{0,1},{0,2},{0,3}};
+vector<vector<int>> edges2 = {{0,1}};
+
+vector<vector<int>> edges1 = {{0,1},{0,2},{0,3},{2,4},{2,5},{3,6},{2,7}};
+vector<vector<int>> edges2 = {{0,1},{0,2},{0,3},{2,4},{2,5},{3,6},{2,7}};
+
+vector<vector<int>> edges1 = {};
+vector<vector<int>> edges2 = {};
+
+vector<vector<int>> edges1 = {{0,1},{2,0},{3,2},{3,6},{8,7},{4,8},{5,4},{3,5},{3,9}};
+vector<vector<int>> edges2 = {{0,1},{0,2},{0,3}};
