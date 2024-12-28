@@ -30,7 +30,6 @@ def create_tree(nodes: List[Optional[int]])-> Optional['TreeNode']:
         i += 1
     return root
 
-
 class Solution:
     def count_swaps(self, nums: List[int])-> int:
         sorted = nums.copy()
