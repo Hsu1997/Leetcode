@@ -1,0 +1,5 @@
+string s = "cczazcc";
+int repeatLimit = 3;
+
+string s = "aababab";
+int repeatLimit = 2;
