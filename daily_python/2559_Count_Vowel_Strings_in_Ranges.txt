@@ -1,0 +1,5 @@
+vector<string> words = {"aba","bcb","ece","aa","e"};
+vector<vector<int>> queries = {{0,2},{1,4},{1,1}};
+
+vector<string> words = {"a","e","i"};
+vector<vector<int>> queries = {{0,2},{0,1},{2,2}};
