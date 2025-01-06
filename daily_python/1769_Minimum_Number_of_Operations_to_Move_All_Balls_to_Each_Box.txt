@@ -1,0 +1,3 @@
+string boxes = "110";
+
+string boxes = "001011";
