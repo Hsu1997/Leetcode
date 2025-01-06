@@ -10,7 +10,6 @@ public:
         int n = boxes.size();
         vector<int> ans(n);
         int left = 0;
-        int right = 0;
         int total = 0;
         int acc = 0;
         for (int i = n-1; i >= 0; i--){
