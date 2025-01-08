@@ -1,0 +1,9 @@
+vector<string> words = {"mass","as","hero","superhero"};
+
+vector<string> words = {"leetcode","et","code"};
+
+vector<string> words = {"blue","green","bu"};
+
+vector<string> words = {"leetcoder","leetcode","od","hamlet","am"};
+
+vector<string> words = {"eeeet","eeet"};
