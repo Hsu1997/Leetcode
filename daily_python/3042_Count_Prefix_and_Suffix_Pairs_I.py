@@ -10,6 +10,7 @@ class Solution:
             if pattern[i] != word[i]:
                 return False
         return True
+    
     def is_suffix(self, pattern, word):
         m = len(pattern)
         n = len(word)
