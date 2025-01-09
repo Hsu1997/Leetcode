@@ -1,0 +1,5 @@
+vector<string> words = {"pay","attention","practice","attend"};
+string pref = "at";
+
+vector<string> words = {"leetcode","win","loops","success"};
+string pref = "code";
