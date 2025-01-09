@@ -1,0 +1,5 @@
+vector<vector<int>> board = {{1,2,3},{4,0,5}};
+
+vector<vector<int>> board = {{1,2,3},{5,4,0}};
+
+vector<vector<int>> board = {{4,1,2},{5,0,3}};
