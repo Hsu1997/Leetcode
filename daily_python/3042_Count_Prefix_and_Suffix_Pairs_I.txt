@@ -1,0 +1,5 @@
+vector<string> words = {"a","aba","ababa","aa"};
+
+vector<string> words = {"pa","papa","ma","mama"};
+
+vector<string> words = {"abab","ab"};
