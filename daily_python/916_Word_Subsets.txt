@@ -1,0 +1,5 @@
+vector<string> words1 = {"amazon","apple","facebook","google","leetcode"};
+vector<string> words2 = {"e","o"};
+
+vector<string> words1 = {"amazon","apple","facebook","google","leetcode"};
+vector<string> words2 = {"l","e"};
