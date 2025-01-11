@@ -1,0 +1,8 @@
+string s  = "annabelle";
+int k = 2;
+
+string s  = "leetcode";
+int k = 3;
+
+string s  = "true";
+int k = 4;
