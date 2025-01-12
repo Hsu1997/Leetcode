@@ -43,12 +43,16 @@ public:
 };
 
 int main(){
-    // string s = "))()))";
-    // string locked = "010100";
+    string s = "))()))";
+    string locked = "010100";
     // string s = "()()";
     // string locked = "0000";
-    string s = ")";
-    string locked = "0";
+    // string s = ")";
+    // string locked = "0";
+    // string s = "()";
+    // string locked = "11";
+    // string s = "())(()(()(())()())(())((())(()())((())))))(((((((())(()))))(";
+    // string locked = "100011110110011011010111100111011101111110000101001101001111";
     Solution S;
     cout << S.canBeValid(s, locked) << endl;
     return 0;
