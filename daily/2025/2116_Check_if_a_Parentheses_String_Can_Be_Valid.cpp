@@ -19,26 +19,22 @@ public:
         }
         if (open > n/2 || close > n/2) return false;
         int change = n/2 - open;
+        int acc = 0;
         for (int i = 0; i < n; i++){
             if (locked[i] == '0'){
                 if (change){
-                    s[i] = '(';
+                    acc++;
                     change--;
                 }
-                else s[i] = ')';
-            }
-        }
-        int acc = 0;
-        for (int i = 0; i < n; i++){
-            if (s[i] == '('){
-                acc++;
+                else acc--;
             }
             else{
-                acc--;
-                if (acc < 0) return false;
+                if (s[i] == '(') acc++;
+                else acc--;
             }
+            if (acc < 0) return false;
         }
-        return true;
+        return acc == 0;
     }
 };
 
