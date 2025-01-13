@@ -1,0 +1,5 @@
+vector<int> nums = {9};
+int maxOperations = 2;
+
+vector<int> nums = {2,4,8,2};
+int maxOperations = 4;
