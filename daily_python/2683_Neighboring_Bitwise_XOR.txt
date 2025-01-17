@@ -1,0 +1,5 @@
+vector<int> derived = {1,1,0};
+
+vector<int> derived = {1,1};
+
+vector<int> derived = {1,0};
