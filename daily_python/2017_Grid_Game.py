@@ -7,7 +7,7 @@ class Solution:
         n = len(grid[0])
         first_row = sum(grid[0])
         second_row = 0
-        ans = float("INF")
+        ans = float('INF')
         for i in range(n):
             first_row -= grid[0][i]
             ans = min(ans, max(first_row, second_row))
