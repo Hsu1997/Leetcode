@@ -1,0 +1,8 @@
+string s1 = "bank";
+string s2 = "kanb";
+
+string s1 = "attack";
+string s2 = "defend";
+
+string s1 = "kelb";
+string s2 = "kelb";
