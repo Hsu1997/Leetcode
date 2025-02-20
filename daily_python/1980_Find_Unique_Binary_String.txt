@@ -1,0 +1,5 @@
+vector<string> nums = {"01","10"};
+
+vector<string> nums = {"00","01"};
+
+vector<string> nums = {"111","011","001"};
