@@ -1,0 +1,8 @@
+vector<int> nodes = {0,-1,0};
+vector<int> query = {1,2};
+
+vector<int> nodes = {0,0,0,0,0};
+vector<int> query = {1,3,5};
+
+vector<int> nodes = {0,-1,0,0,-1,0};
+vector<int> query = {2,3,4,5};
