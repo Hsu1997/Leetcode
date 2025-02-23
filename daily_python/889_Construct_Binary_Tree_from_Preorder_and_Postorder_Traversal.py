@@ -10,7 +10,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def print_tree(root):
+def print_tree(root: TreeNode) -> None:
     que = deque([root])
     while que:
         curr = que.popleft()
