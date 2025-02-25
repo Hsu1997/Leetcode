@@ -1,0 +1,11 @@
+vector<vector<int>> edges = {{0,1},{1,2},{1,3},{3,4}};
+int bob = 3;
+vector<int> amount = {-2,4,2,-4,6};
+
+vector<vector<int>> edges = {{0,1}};
+int bob = 1;
+vector<int> amount = {-7280,2350};
+
+vector<vector<int>> edges = {{0,1},{1,2},{2,3}};
+int bob = 3;
+vector<int> amount = {-5644,-6018,1188,-8502};
