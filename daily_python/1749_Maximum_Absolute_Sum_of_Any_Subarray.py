@@ -6,14 +6,13 @@ class Solution:
     def maxAbsoluteSum(self, nums: List[int]) -> int:
         min_acc = 0
         max_acc = 0
+        prefix = 0
         ans = 0
         for num in nums:
-            max_acc += num
-            min_acc += num
-            max_acc = max(max_acc, 0)
-            min_acc = min(min_acc, 0)
-            ans = max(ans, max_acc, abs(min_acc))
-        return ans
+            prefix += num
+            max_acc = max(max_acc, prefix)
+            min_acc = min(min_acc, prefix)
+        return max_acc - min_acc
     
 def readDataSet(filename):
     dataset = []
