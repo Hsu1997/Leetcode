@@ -16,6 +16,7 @@ public:
                 int prev = arr[i];
                 int curr = arr[j];
                 int len = 2;
+                // Can use DP to reduce redundant calculations
                 while(s.find(prev + curr) != s.end()){
                     int temp = prev;
                     prev = curr;
