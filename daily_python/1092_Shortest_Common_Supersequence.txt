@@ -1,0 +1,5 @@
+string str1 = "abac";
+string str2 = "cab";
+
+string str1 = "aaaaaaaa";
+string str2 = "aaaaaaaa";
