@@ -1,0 +1,5 @@
+string blocks = "WBBWWBBWBW";
+int k = 7;
+
+string blocks = "WBWBBBW";
+int k = 2;
