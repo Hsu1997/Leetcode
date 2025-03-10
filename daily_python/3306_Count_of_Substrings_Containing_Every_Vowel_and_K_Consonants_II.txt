@@ -1,0 +1,8 @@
+string word = "aeioqq";
+int k = 1;
+
+string word = "aeiou";
+int k = 0;
+
+string word = "ieaouqqieaouqq";
+int k = 1;
