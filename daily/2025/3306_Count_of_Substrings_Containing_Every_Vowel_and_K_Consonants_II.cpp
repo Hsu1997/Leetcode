@@ -44,6 +44,8 @@ int main(){
     // int k = 0;
     // string word = "ieaouqqieaouqq";
     // int k = 1;
+    // string word = "iqeaouqi";
+    // int k = 2;
     Solution S;
     cout << S.countOfSubstrings(word, k) << endl;
     return 0;
