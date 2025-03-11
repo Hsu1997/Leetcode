@@ -1,0 +1,5 @@
+string s = "daabcbaabcbc";
+string part = "abc";
+
+string s = "axxxxyyyyb";
+string part = "xy";
