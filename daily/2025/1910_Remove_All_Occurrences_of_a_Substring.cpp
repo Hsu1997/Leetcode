@@ -34,11 +34,11 @@ public:
             }
         }
         string ans;
-        ans.resize(sta.size());
-        for (int k = sta.size()-1; k >= 0; k--){
-            ans[k] = s[sta.top().first];
+        while(!sta.empty()){
+            ans += s[sta.top().first];
             sta.pop();
         }
+        reverse(ans.begin(), ans.end());
         return ans;
     }
 };
