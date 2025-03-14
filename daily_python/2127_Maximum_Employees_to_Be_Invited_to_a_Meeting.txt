@@ -1,0 +1,5 @@
+vector<int> favorite = {2,2,1,2};
+
+vector<int> favorite = {1,2,0};
+
+vector<int> favorite = {3,0,1,4,1};
