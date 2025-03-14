@@ -1,0 +1,11 @@
+int numCourses = 2;
+vector<vector<int>> prerequisites = {{1,0}};
+vector<vector<int>> queries = {{0,1},{1,0}};
+
+int numCourses = 2;
+vector<vector<int>> prerequisites = {};
+vector<vector<int>> queries = {{1,0},{0,1}};
+
+int numCourses = 3;
+vector<vector<int>> prerequisites = {{1,2},{1,0},{2,0}};
+vector<vector<int>> queries = {{1,0},{1,2}};
