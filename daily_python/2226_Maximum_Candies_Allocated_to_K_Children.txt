@@ -1,0 +1,5 @@
+vector<int> candies = {5,8,6};
+long long k = 3;
+
+vector<int> candies = {2,5};
+long long k = 11;
