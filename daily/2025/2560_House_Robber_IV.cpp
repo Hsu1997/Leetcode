@@ -36,6 +36,8 @@ int main(){
     int k = 2;
     // vector<int> nums = {2,7,9,3,1};
     // int k = 2;
+    // vector<int> nums = {1};
+    // int k = 1;
     Solution S;
     cout << S.minCapability(nums, k) << endl;
     return 0;
