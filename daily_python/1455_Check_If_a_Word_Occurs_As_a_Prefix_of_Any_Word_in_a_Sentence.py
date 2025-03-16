@@ -6,7 +6,8 @@ class Solution:
     def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
         n = len(sentence)
         m = len(searchWord)
-        idx = ptr = 0
+        idx = 0
+        ptr = 0
         ans = 0
         while idx < n:
             ans += 1
