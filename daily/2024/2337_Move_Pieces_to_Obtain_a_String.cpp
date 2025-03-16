@@ -5,49 +5,21 @@
 using namespace std;
 
 class Solution {
-    public:
-        bool canChange(string start, string target) {
-            int n = start.length();
-            int idx = 0;
-            for (int i = 0; i < n; i++){
-                if (start[i] == '_') continue;
-                else if (start[i] == 'R'){
-                    while(idx < i){
-                        if (target[idx] == '_') idx++;
-                        else return false;
-                    }
-                    bool find = false;
-                    while(idx < n){
-                        if (target[idx] == 'R'){
-                            idx++;
-                            find = true;
-                            break;
-                        }
-                        else if (target[idx] == 'L') return false;
-                        else idx++;
-                    }
-                    if (!find) return false;
-                }
-                else if (start[i] == 'L'){
-                    bool find = false;
-                    while(idx <= i){
-                        if (target[idx] == 'L'){
-                            idx++;
-                            find = true;
-                            break;
-                        }
-                        else if (target[idx] == 'R') return false;
-                        else idx++;
-                    }
-                    if (!find) return false;
-                }
-            }
-            while(idx < n){
-                if (target[idx++] != '_') return false;
-            }
-            return true;
+public:
+    bool canChange(string start, string target) {
+        int n = start.length();
+        int start_idx = 0;
+        int target_idx = 0;
+        while(start_idx < n || target_idx < n){
+            while(start_idx < n && start[start_idx] == '_') start_idx++;
+            while(target_idx < n && target[target_idx] == '_') target_idx++;
+            if (start_idx == n || target_idx == n) return start_idx == target_idx;
+            if ((start[start_idx] != target[target_idx]) || (start[start_idx] == 'L' && target_idx > start_idx) || (start[start_idx] == 'R' && start_idx > target_idx)) return false;
+            start_idx++, target_idx++;
         }
-    };
+        return true;
+    }
+};
 
 int main(){
     string start = "_L__R__R_";
