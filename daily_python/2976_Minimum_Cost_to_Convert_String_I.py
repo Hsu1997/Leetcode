@@ -49,7 +49,7 @@ if __name__ == '__main__':
         filename = os.path.splitext(currfile)[0] + '.txt'
     else:
         filename = sys.argv[1]
-    print(filename)
+    # print(filename)
     data = readDataFromFile(filename)
     solution = Solution()
     results = []

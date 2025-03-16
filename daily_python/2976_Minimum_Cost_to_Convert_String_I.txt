@@ -10,17 +10,17 @@ vector<char> original = {'a','c'}
 vector<char> changed = {'c','b'}
 vector<int> cost = {1,2}
 
-string source = "abcd"
-string target = "abce"
-vector<char> original = {'a'}
-vector<char> changed = {'e'}
-vector<int> cost = {10000}
-
 string source = "aaadbdcdac"
 string target = "cdbabaddba"
 vector<char> original = {'a','c','b','d','b','a','c'}
 vector<char> changed = {'c','a','d','b','c','b','d'}
 vector<int> cost = {7,2,1,3,6,1,7}
+
+string source = "abcd"
+string target = "abce"
+vector<char> original = {'a'}
+vector<char> changed = {'e'}
+vector<int> cost = {10000}
 
 string source = "ahymwvveassnabpnivvlhwnymipzyywplahbppaeisazybzbuyveobnollbmlubwehounmhepwsyallupvhuawlvoszyiwlabulzhvmiulilmysvsezbhbylaowmbybpylozvnublnsyweapaauhehswollnmlbeoanennnuoybymnnyhlmmvivbhwmhnibspusezippnybyhyzzbypyamlsylhiinlmwveibnmwpspmnnlmpnzmapouposwowavimbhuaoosiewymbiuwaoesblyhpoebhapnaeiveiezznwzoowhmsbvoiziiymelohboohmvzishzviabwzuzoamysphamowvlwlmmoyoyzewuowbhupobwzzouhllszpsnyubnaheyaouozuzpelomhpwezevyuobbhnwnlyeyusoslenbolmeunaopvhanibpvvloiplhobipzbobsbsbbhpyvoslhwupwvhsyhizluziahamay"
 string target = "iwevmnllzbiespsmeoeunnvzuymnymvoeyuyhozuminepwaezpeeayhualvhlboeewaboosplonuzheuziyymhbnywnwzyameyshvbhnzvvbeznniaswzslzbsasvbewzzzmvulvvhzmohzmyummypaeowusvlmlyvmvaizuvomvipbpwnbimppoymiesmymioeemzpbwbvuszpvbpwmnyvypyzemsniaavnmiphiyvimzoozuepbowbpvmpelahvupuwzlbbywvyusawobouslblvbpvluylnsiauiwzawiowsnmvawepielbavvpbmvylvlylzunmbnaesoimuvwsmybmnybbhwbyuimmoebpvwnpiyebzzuwhiovubuynyvybipbzsnuopuhpzosmnhlnlmnneumshwaiyyspbpbiaiovyyvomhanunieisazshvyubmbvnbpiwipmuzbymnozwzaaawenlwiowpsvleppzellhei"
