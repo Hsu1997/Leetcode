@@ -1,0 +1,20 @@
+string start = "_L__R__R_";
+string end = "L______RR";
+
+string start = "R_L_";
+string end = "__LR";
+
+string start = "_R";
+string end = "R_";
+
+string start = "_LL__R__R_";
+string end = "L___L___RR";
+
+string start = "R_L__R__R_";
+string end = "_L______RR";
+
+string start = "_L";
+string end = "LR";
+
+string start = "R";
+string end = "_";
