@@ -1,0 +1,8 @@
+string s = "LeetcodeHelpsMeLearn";
+vector<int> spaces = {8,13,15};
+
+string s = "icodeinpython";
+vector<int> spaces = {1,5,7,9};
+
+string s = "spacing";
+vector<int> spaces = {0,1,2,3,4,5,6};
