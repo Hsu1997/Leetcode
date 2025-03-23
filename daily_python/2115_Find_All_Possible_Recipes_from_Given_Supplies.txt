@@ -1,0 +1,11 @@
+vector<string> recipes = {"bread"};
+vector<vector<string>> ingredients = {{"yeast","flour"}};
+vector<string> supplies = {"yeast","flour","corn"};
+
+vector<string> recipes = {"bread","sandwich"};
+vector<vector<string>> ingredients = {{"yeast","flour"},{"bread","meat"}};
+vector<string> supplies = {"yeast","flour","meat"};
+
+vector<string> recipes = {"bread","sandwich","burger"};
+vector<vector<string>> ingredients = {{"yeast","flour"},{"bread","meat"},{"sandwich","meat","bread"}};
+vector<string> supplies = {"yeast","flour","meat"};
