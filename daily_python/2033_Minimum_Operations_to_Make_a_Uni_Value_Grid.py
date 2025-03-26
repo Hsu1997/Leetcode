@@ -9,7 +9,7 @@ class Solution:
             return -1
         nums = [element // x for row in grid for element in row]
         n = len(nums)
-        sorted(nums)
+        nums = sorted(nums)
         median = nums[n//2]
         ans = sum(abs(num - median) for num in nums)
         return ans
