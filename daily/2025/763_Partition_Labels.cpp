@@ -9,24 +9,20 @@ class Solution {
 public:
     vector<int> partitionLabels(string s) {
         int n = s.length();
-        unordered_map<char,int> m;
-        vector<int> last_pos(n, n);
-        for (int i = n-1; i >= 0; i--){
-            if (m.find(s[i]) == m.end()) m[s[i]] = i;
-            last_pos[i] = m[s[i]];
-        }
-        last_pos.push_back(n);
+        int last_pos[26];
+        for (int i = 0; i < n; i++) last_pos[s[i] - 'a'] = i;
         vector<int> ans;
         int curr_start = 0;
-        int curr_last = last_pos[0];
-        for (int i = 0; i <= n; i++){
+        int curr_last = last_pos[s[0] - 'a'];
+        for (int i = 0; i < n; i++){
             if (i > curr_last){
                 ans.push_back(i - curr_start);
                 curr_start = i;
-                curr_last = last_pos[i];
+                curr_last = last_pos[s[i] - 'a'];
             }
-            curr_last = max(curr_last, last_pos[i]);
+            curr_last = max(curr_last, last_pos[s[i] - 'a']);
         }
+        ans.push_back(n - curr_start);
         return ans;
     }
 };
