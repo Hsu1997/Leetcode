@@ -9,7 +9,7 @@ class Solution:
         dp = [0] * n
         dp[n-1] = questions[n-1][0]
         for i in range(n-2, -1, -1):
-            dp[i] = questions[i][0] + dp[i + questions[i][1] + 1] if i + questions[i][1] + 1 < n else 0
+            dp[i] = questions[i][0] + (dp[i + questions[i][1] + 1] if i + questions[i][1] + 1 < n else 0)
             dp[i] = max(dp[i], dp[i+1])
         return dp[0]
     
