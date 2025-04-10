@@ -1,0 +1,14 @@
+long long start = 1;
+long long finish = 6000;
+int limit = 4;
+string s = "124";
+
+long long start = 15;
+long long finish = 215;
+int limit = 6;
+string s = "10";
+
+long long start = 1000;
+long long finish = 2000;
+int limit = 4;
+string s = "3000";
