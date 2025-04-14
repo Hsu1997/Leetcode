@@ -39,18 +39,18 @@ public:
 };
 
 int main(){
-    // vector<int> arr = {3,0,1,1,9,7};
-    // int a = 7;
-    // int b = 2;
-    // int c = 3;
+    vector<int> arr = {3,0,1,1,9,7};
+    int a = 7;
+    int b = 2;
+    int c = 3;
     // vector<int> arr = {1,1,2,2,3};
     // int a = 0;
     // int b = 0;
     // int c = 1;
-    vector<int> arr = {7,3,7,3,12,1,12,2,3};
-    int a = 5;
-    int b = 8;
-    int c = 1;
+    // vector<int> arr = {7,3,7,3,12,1,12,2,3};
+    // int a = 5;
+    // int b = 8;
+    // int c = 1;
     Solution S;
     cout << S.countGoodTriplets(arr, a, b, c) << endl;
     return 0;
