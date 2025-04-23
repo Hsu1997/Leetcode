@@ -1,0 +1,5 @@
+int n = 2;
+int maxValue = 5;
+
+int n = 5;
+int maxValue = 3;
