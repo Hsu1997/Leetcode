@@ -20,7 +20,7 @@ public:
         }
         int ans = 0;
         int c = 0;
-        for (auto [sum, count] : m){
+        for (auto& [sum, count] : m){
             if (count > c){
                 c = count;
                 ans = 1;
