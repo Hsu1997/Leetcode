@@ -1,0 +1,11 @@
+vector<int> nums = {3,2,4};
+int modulo = 2;
+int k = 1;
+
+vector<int> nums = {3,1,9,6};
+int modulo = 3;
+int k = 0;
+
+vector<int> nums = {11,12,21,31};
+int modulo = 10;
+int k = 1;
