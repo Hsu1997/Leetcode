@@ -30,7 +30,7 @@ public:
 };
 
 int main(){
-    vector<int> nums = {1,3,5,2,7,5};;
+    vector<int> nums = {1,3,5,2,7,5};
     int minK = 1;
     int maxK = 5;
     // vector<int> nums = {1,1,1,1};
