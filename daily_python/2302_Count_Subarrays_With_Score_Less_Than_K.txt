@@ -1,0 +1,5 @@
+vector<int> nums = {2,1,4,3,5};
+long long k = 10;
+
+vector<int> nums = {1,1,1};
+long long k = 5;
