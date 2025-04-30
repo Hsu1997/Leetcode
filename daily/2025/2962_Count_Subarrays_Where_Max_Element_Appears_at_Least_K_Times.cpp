@@ -21,10 +21,10 @@ public:
 };
 
 int main(){
-    vector<int> nums = {1,3,2,3,3};
-    int k = 2;
-    // vector<int> nums = {1,4,2,1};
-    // int k = 3;
+    // vector<int> nums = {1,3,2,3,3};
+    // int k = 2;
+    vector<int> nums = {1,4,2,1};
+    int k = 3;
     Solution S;
     cout << S.countSubarrays(nums, k) << endl;
     return 0;
