@@ -1,0 +1,3 @@
+string dominoes = "RR.L";
+
+string dominoes = ".L.R...LR..L..";
