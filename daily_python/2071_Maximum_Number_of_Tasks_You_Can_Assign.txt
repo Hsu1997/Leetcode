@@ -1,0 +1,19 @@
+vector<int> tasks = {3,2,1};
+vector<int> workers = {0,3,3};
+int pills = 1;
+int strength = 1;
+
+vector<int> tasks = {5,4};
+vector<int> workers = {0,0,0};
+int pills = 1;
+int strength = 5;
+
+vector<int> tasks = {10,15,30};
+vector<int> workers = {0,10,10,10,10};
+int pills = 3;
+int strength = 10;
+
+vector<int> tasks = {5,9,8,5,9};
+vector<int> workers = {1,6,4,2,6};
+int pills = 1;
+int strength = 5;
