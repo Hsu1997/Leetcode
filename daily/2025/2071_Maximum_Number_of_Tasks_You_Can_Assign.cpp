@@ -1,29 +1,47 @@
 #include <iostream>
 #include <vector>
 #include <set>
+#include <queue>
 
 using namespace std;
 
 class Solution {
 public:
     bool valid(vector<int>& tasks, vector<int>& workers, int pills, int strength, int k){
-        multiset<int> ms;
-        for (int i = 0; i < k; i++) ms.insert(workers[i]);
+        deque<int> que;
+        int ptr = 0;
         for (int i = k - 1; i >= 0; i--){
-            if (*prev(ms.end()) >= tasks[i]) ms.erase(prev(ms.end()));
+            int curr_task = tasks[i];
+            while(ptr < k && workers[ptr] + strength >= curr_task){
+                que.push_front(workers[ptr]);
+                ptr++;
+            }
+            if (que.empty()) return false;
+            if (que.back() >= curr_task) que.pop_back();
             else{
                 if (pills == 0) return false;
                 pills--;
-                auto it = ms.lower_bound(tasks[i] - strength);
-                if (it == ms.end()) return false;
-                ms.erase(it);
+                que.pop_front();
             }
         }
+        // multiset<int> ms;
+        // for (int i = 0; i < k; i++) ms.insert(workers[i]);
+        // for (int i = k - 1; i >= 0; i--){
+        //     if (*prev(ms.end()) >= tasks[i]) ms.erase(prev(ms.end()));
+        //     else{
+        //         if (pills == 0) return false;
+        //         pills--;
+        //         auto it = ms.lower_bound(tasks[i] - strength);
+        //         if (it == ms.end()) return false;
+        //         ms.erase(it);
+        //     }
+        // }
         return true;
     }
+
     int maxTaskAssign(vector<int>& tasks, vector<int>& workers, int pills, int strength) {
         sort(tasks.begin(), tasks.end());
-        sort(workers.begin(), workers.end(), greater());
+        sort(workers.begin(), workers.end(), greater<int>());
         int left = 0;
         int right = min(tasks.size(), workers.size());
         int ans = 0;
