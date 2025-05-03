@@ -1,0 +1,5 @@
+vector<int> tops = {2,1,2,4,2,2};
+vector<int> bottoms = {5,2,6,2,3,2};
+
+vector<int> tops = {3,5,1,2,3};
+vector<int> bottoms = {3,6,3,3,4};
