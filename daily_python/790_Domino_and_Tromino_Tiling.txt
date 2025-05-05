@@ -1,0 +1,9 @@
+int n = 3;
+
+int n = 1;
+
+int n = 500;
+
+int n = 878;
+
+int n = 1000;
