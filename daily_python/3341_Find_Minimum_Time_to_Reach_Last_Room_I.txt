@@ -1,0 +1,5 @@
+vector<vector<int>> moveTime = {{0,4},{4,4}};
+
+vector<vector<int>> moveTime = {{0,0,0},{0,0,0}};
+
+vector<vector<int>> moveTime = {{0,1},{1,2}};
