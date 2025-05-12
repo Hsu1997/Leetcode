@@ -1,0 +1,7 @@
+string num = "123";
+
+string num = "112";
+
+string num = "12345";
+
+string num = "96509861244547846";
