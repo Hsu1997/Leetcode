@@ -1,0 +1,5 @@
+vector<int> digits = {2,1,3,0};
+
+vector<int> digits = {2,2,8,8,2};
+
+vector<int> digits = {3,7,5};
