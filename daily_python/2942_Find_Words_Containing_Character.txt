@@ -1,0 +1,8 @@
+vector<string> words = {"leet","code"};
+char x = 'e';
+
+vector<string> words = {"abc","bcd","aaaa","cbc"};
+char x = 'a';
+
+vector<string> words = {"abc","bcd","aaaa","cbc"};
+char x = 'z';
