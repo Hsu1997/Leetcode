@@ -1,0 +1,5 @@
+vector<string> words = {"lc","cl","gg"};
+
+vector<string> words = {"ab","ty","yt","lc","cl","ab"};
+
+vector<string> words = {"cc","ll","xx"};
