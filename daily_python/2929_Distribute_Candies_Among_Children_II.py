@@ -6,10 +6,10 @@ class Solution:
     def cal(self, n):
         if n < 0:
             return 0
-        return n * (n - 1) // 2
+        return n * (n - 1) / 2
     
     def distributeCandies(self, n: int, limit: int) -> int:
-        return self.cal(n + 2) - 3 * self.cal(n - (limit + 1) + 2) + 3 * self.cal(n - 2 * (limit + 1) + 2) - self.cal(n - 3 * (limit + 1) + 2)
+        return int(self.cal(n + 2) - 3 * self.cal(n - (limit + 1) + 2) + 3 * self.cal(n - 2 * (limit + 1) + 2) - self.cal(n - 3 * (limit + 1) + 2))
 
 def readDataSet(filename):
     dataset = []
