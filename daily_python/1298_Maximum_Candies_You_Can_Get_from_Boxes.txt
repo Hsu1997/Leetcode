@@ -1,0 +1,11 @@
+vector<int> status = {1,0,1,0};
+vector<int>  candies = {7,5,4,100};
+vector<vector<int>> keys = {{},{},{1},{}};
+vector<vector<int>>containedBoxes = {{1,2},{3},{},{}};
+vector<int> initialBoxes = {0};
+
+vector<int> status = {1,0,0,0,0,0};
+vector<int>  candies = {1,1,1,1,1,1};
+vector<vector<int>> keys = {{1,2,3,4,5},{},{},{},{},{}};
+vector<vector<int>>containedBoxes = {{1,2,3,4,5},{},{},{},{},{}};
+vector<int> initialBoxes = {0};
