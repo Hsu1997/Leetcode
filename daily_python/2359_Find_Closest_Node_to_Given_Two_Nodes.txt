@@ -1,0 +1,11 @@
+vector<int> edges = {2,2,3,-1};
+int node1 = 0;
+int node2 = 1;
+
+vector<int> edges = {1,2,-1};
+int node1 = 0;
+int node2 = 2;
+
+vector<int> edges = {4,4,4,5,1,2,2};
+int node1 = 1;
+int node2 = 1;
