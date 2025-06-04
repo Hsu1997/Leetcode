@@ -1,0 +1,8 @@
+string word = "dbca";
+int numFriends = 2;
+
+string word = "gggg";
+int numFriends = 4;
+
+string word = "gh";
+int numFriends = 1;
