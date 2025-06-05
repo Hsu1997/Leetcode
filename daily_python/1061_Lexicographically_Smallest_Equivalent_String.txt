@@ -1,0 +1,11 @@
+string s1 = "parker";
+string s2 = "morris";
+string baseStr = "parser";
+
+string s1 = "hello";
+string s2 = "world";
+string baseStr = "hold";
+
+string s1 = "leetcode";
+string s2 = "programs";
+string baseStr = "sourcecode";
