@@ -1,0 +1,5 @@
+string colors = "abaca";
+vector<vector<int>> edges = {{0,1},{0,2},{2,3},{3,4}};
+
+string colors = "a";
+vector<vector<int>> edges = {{0,0}};
