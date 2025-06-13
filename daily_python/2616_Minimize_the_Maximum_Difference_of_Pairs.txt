@@ -1,0 +1,8 @@
+vector<int> nums = {10,1,2,7,1,3};
+int p = 2;
+
+vector<int> nums = {4,2,1,2};
+int p = 1;
+
+vector<int> nums = {0,5,3,4};
+int p = 0;
