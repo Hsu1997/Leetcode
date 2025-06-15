@@ -68,6 +68,8 @@ int main(){
     vector<int> group = {1,2,2};
     // vector<string> words = {"a","b","c","d"};
     // vector<int> group = {1,2,3,4};
+    // vector<string> words = {"aab","ca","cbd"};
+    // vector<int> group = {3,3,2};
     Solution S;
     vector<string> ans = S.getWordsInLongestSubsequence(words, group);
     for (string s : ans) cout << s << " ";
