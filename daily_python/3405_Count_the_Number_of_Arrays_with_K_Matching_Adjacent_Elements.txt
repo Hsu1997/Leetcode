@@ -1,0 +1,19 @@
+int n = 3;
+int m = 2;
+int k = 1;
+
+int n = 4;
+int m = 2;
+int k = 2;
+
+int n = 5;
+int m = 2;
+int k = 0;
+
+int n = 100000;
+int m = 100000;
+int k = 9;
+
+int n = 100000;
+int m = 100000;
+int k = 99999;
