@@ -1,34 +1,39 @@
 import os
 import sys
 
-class Solution:
-    def __init__(self):
-        self.M = 100001
-        self.mod = int(1e9 + 7)
-        self.fact = [0] * self.M
-        self.inv_fact = [0] * self.M
-    def qpow(self, x, n):
-        res = 1
-        while n:
-            if n & 1:
-                res = res * x % self.mod
-            x = x * x % self.mod
-            n //= 2
-        return res
-    def init_fact(self):
-        self.fact[0] = 1
-        for i in range(1, self.M):
-            self.fact[i] = self.fact[i-1] * i % self.mod
-        self.inv_fact[self.M - 1] = self.qpow(self.fact[self.M - 1], self.mod - 2)
-        for i in range(self.M - 2, -1, -1):
-            self.inv_fact[i] = self.inv_fact[i + 1] * (i + 1) % self.mod
-        return
-    def cnk(self, n, k):
-        return (self.fact[n] * self.inv_fact[n - k] % self.mod) * self.inv_fact[k] % self.mod
-    def countGoodArrays(self, n: int, m: int, k: int) -> int:
-        self.init_fact()
-        return (m * self.cnk(n-1, k) % self.mod) * self.qpow(m - 1, n - 1 - k) % self.mod
+mod = 10 ** 9 + 7
+M = 100001
+fact = [0] * M
+inv_fact = [0] * M
 
+def qpow(x, n):
+    res = 1
+    while n:
+        if n & 1:
+            res = res * x % mod
+        x = x * x % mod
+        n //= 2
+    return res
+
+def init_fact():
+    if fact[0] == 1:
+        return
+    fact[0] = 1
+    for i in range(1, M):
+        fact[i] = fact[i-1] * i % mod
+    inv_fact[M - 1] = qpow(fact[M - 1], mod - 2)
+    for i in range(M - 2, -1, -1):
+        inv_fact[i] = inv_fact[i + 1] * (i + 1) % mod
+    return
+
+def cnk(n, k):
+    return (fact[n] * inv_fact[n - k] % mod) * inv_fact[k] % mod
+
+class Solution:
+    def countGoodArrays(self, n: int, m: int, k: int) -> int:
+        init_fact()
+        return (m * cnk(n-1, k) % mod) * qpow(m - 1, n - 1 - k) % mod
+    
 def readDataSet(filename):
     dataset = []
     with open(filename, 'r') as file:
