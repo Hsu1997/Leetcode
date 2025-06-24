@@ -1,0 +1,8 @@
+int k = 2;
+int n = 5;
+
+int k = 3;
+int n = 7;
+
+int k = 7;
+int n = 17;
