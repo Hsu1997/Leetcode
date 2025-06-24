@@ -1,0 +1,7 @@
+string s = "abcdefghi";
+int k = 3;
+char fill = 'x';
+
+string s = "abcdefghij";
+int k = 3;
+char fill = 'x';
