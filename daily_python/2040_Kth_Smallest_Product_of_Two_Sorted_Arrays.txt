@@ -1,0 +1,15 @@
+vector<int> nums1 = {2,5};
+vector<int> nums2 = {3,4};
+int k = 2;
+
+vector<int> nums1 = {-4,-2,0,3};
+vector<int> nums2 = {2,4};
+int k = 6;
+
+vector<int> nums1 = {-2,-1,0,1,2};
+vector<int> nums2 = {-3,-1,2,4,5};
+int k = 3;
+
+vector<int> nums1 = {-100000,100000};
+vector<int> nums2 = {-100000,100000};
+int k = 1;
