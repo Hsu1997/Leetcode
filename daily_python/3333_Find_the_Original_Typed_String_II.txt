@@ -1,0 +1,14 @@
+string word = "aabbccdd";
+int k = 7;
+
+string word = "aabbccdd";
+int k = 8;
+
+string word = "aaabbb";
+int k = 3;
+
+string word = "wwwwwwwbbbbssssssssvvoooooooqqqqqqqqqvvvvvooooooocccccppppkkkkkkjnddddddbbb";
+int k = 50;
+
+string word = "bbzoggrccukkwwzqdrrhhhkvbbvjwggvvccsdwwiicumoocklyynyyhhcwjssppmmaacceehhtoowkooccekkddppxppzzyyvvll";
+int k = 80;
