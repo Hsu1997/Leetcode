@@ -26,8 +26,7 @@ public:
         if (n >= k) return ans;
         // for (int i : contingous_len) cout << i << " ";
         // cout << endl << endl;
-        vector<int> presum(k, 0);
-        presum[0] = 1;
+        vector<int> presum(k, 1);
         for (int i = 0; i < n; i++){
             int curr_len = contingous_len[i];
             vector<int> curr(k, 0);
@@ -40,9 +39,7 @@ public:
             presum[0] = curr[0];
             for (int j = 1; j < k; j++) presum[j] = (presum[j-1] + curr[j]) % mod;
         }
-        int smaller_than_k_sum = 0;
-        for (int i : presum) smaller_than_k_sum = (smaller_than_k_sum + i) % mod;
-        ans -= smaller_than_k_sum;
+        ans -= presum[k-1];
         if (ans < 0) ans += mod;
         return ans;
     }
