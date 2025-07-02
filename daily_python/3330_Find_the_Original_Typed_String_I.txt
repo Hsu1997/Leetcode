@@ -1,0 +1,5 @@
+string word = "abbcccc";
+
+string word = "abcd";
+
+string word = "aaaa";
