@@ -1,0 +1,5 @@
+string s = "NWSE";
+int k = 1;
+
+string s = "NSWWEW";
+int k = 3;
