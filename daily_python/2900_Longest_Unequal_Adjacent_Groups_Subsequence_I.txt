@@ -1,0 +1,5 @@
+vector<string> words = {"e","a","b"};
+vector<int> groups = {0,0,1};
+
+vector<string> words = {"a","b","c","d"};
+vector<int> groups = {1,0,1,1};
