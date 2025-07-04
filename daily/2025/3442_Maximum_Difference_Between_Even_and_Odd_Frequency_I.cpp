@@ -9,7 +9,7 @@ public:
     int maxDifference(string s) {
         int M = INT_MIN;
         int m = INT_MAX;
-        int cnt[26] = {0};
+        vector<int> cnt(26, 0);
         for (char c : s) cnt[c-'a']++;
         for (int i : cnt){
             if (i == 0) continue;
