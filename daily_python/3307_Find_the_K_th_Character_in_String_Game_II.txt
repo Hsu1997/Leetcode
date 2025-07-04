@@ -1,0 +1,5 @@
+long long k = 5;
+vector<int> operations = {0,0,0};
+
+long long k = 10;
+vector<int> operations = {0,1,0,1};
