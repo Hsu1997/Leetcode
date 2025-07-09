@@ -1,0 +1,14 @@
+string s = "12233";
+int k = 4;
+
+string s = "1122211";
+int k = 3;
+
+string s = "110";
+int k = 3;
+
+string s = "44114402";
+int k = 7;
+
+string s = "330130303114333";
+int k = 13;
