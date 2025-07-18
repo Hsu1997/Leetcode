@@ -1,0 +1,5 @@
+string word = "234Adas";
+
+string word = "b3";
+
+string word = "a3$e";
