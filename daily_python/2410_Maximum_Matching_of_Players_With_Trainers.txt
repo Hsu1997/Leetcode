@@ -1,0 +1,5 @@
+vector<int> players = {4,7,9};
+vector<int> trainers = {8,2,5,8};
+
+vector<int> players = {1,1,1};
+vector<int> trainers = {10};
