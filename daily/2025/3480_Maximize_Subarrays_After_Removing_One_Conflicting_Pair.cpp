@@ -37,12 +37,12 @@ public:
 };
 
 int main(){
-    // int n = 4;
-    // vector<vector<int>> conflictingPairs = {{2,3},{1,4}};
+    int n = 4;
+    vector<vector<int>> conflictingPairs = {{2,3},{1,4}};
     // int n = 5;
     // vector<vector<int>> conflictingPairs = {{1,2},{2,5},{3,5}};
-    int n = 100000;
-    vector<vector<int>> conflictingPairs = {{50000,50001},{99999,100000}};
+    // int n = 100000;
+    // vector<vector<int>> conflictingPairs = {{50000,50001},{99999,100000}};
     Solution S;
     cout << S.maxSubarrays(n, conflictingPairs) << endl;
     return 0;
