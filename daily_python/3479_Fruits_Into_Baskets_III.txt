@@ -1,0 +1,5 @@
+vector<int> fruits = {4,2,5};
+vector<int> baskets = {3,5,4};
+
+vector<int> fruits = {3,6,1};
+vector<int> baskets = {6,4,7};
