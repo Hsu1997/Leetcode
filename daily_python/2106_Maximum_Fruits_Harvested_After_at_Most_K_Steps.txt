@@ -1,0 +1,15 @@
+vector<vector<int>> fruits = {{2,8},{6,3},{8,6}};
+int startPos = 5;
+int k = 4;
+
+vector<vector<int>> fruits = {{0,9},{4,1},{5,7},{6,2},{7,4},{10,9}};
+int startPos = 5;
+int k = 4;
+
+vector<vector<int>> fruits = {{0,3},{6,4},{8,5}};
+int startPos = 3;
+int k = 2;
+
+vector<vector<int>> fruits = {{0,10000}};
+int startPos = 200000;
+int k = 200000;
