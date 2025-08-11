@@ -1,0 +1,5 @@
+int numRows = 5;
+
+int numRows = 1;
+
+int numRows = 10;
