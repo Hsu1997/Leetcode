@@ -1,0 +1,5 @@
+int n = 15;
+vector<vector<int>> queries = {{0,1},{2,2},{0,3}};
+
+int n = 2;
+vector<vector<int>> queries = {{0,0}};
