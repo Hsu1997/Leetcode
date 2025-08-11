@@ -1,0 +1,9 @@
+int n = 1;
+
+int n = 16;
+
+int n = 3;
+
+int n = 0;
+
+int n = -10000;
