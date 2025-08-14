@@ -22,7 +22,6 @@ class Solution:
         ans = 0
         for i in range(len(move) // 2):
             ans += min(m * 2, move[i])
-        print(move)
         return ans
     
 def readDataSet(filename):
