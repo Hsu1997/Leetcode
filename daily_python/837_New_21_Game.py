@@ -16,7 +16,7 @@ class Solution:
             dp[i] = acc / maxPts
             if i < k:
                 acc += dp[i]
-            if i >= k:
+            else:
                 ans += dp[i]
         return ans
 

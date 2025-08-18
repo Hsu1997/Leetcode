@@ -21,3 +21,7 @@ int maxPts = 1;
 int n = 12;
 int k = 1;
 int maxPts = 10;
+
+int n = 15;
+int k = 1;
+int maxPts = 10;
