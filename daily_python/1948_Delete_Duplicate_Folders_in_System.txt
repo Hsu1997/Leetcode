@@ -1,0 +1,7 @@
+vector<vector<string>> paths = {{"a"},{"c"},{"d"},{"a","b"},{"c","b"},{"d","a"}};
+
+vector<vector<string>> paths = {{"a"},{"c"},{"a","b"},{"c","b"},{"a","b","x"},{"a","b","x","y"},{"w"},{"w","y"}};
+
+vector<vector<string>> paths = {{"a","b"},{"c","d"},{"c"},{"a"}};
+
+vector<vector<string>> paths = {{"b"},{"f"},{"f","r"},{"f","r","g"},{"f","r","g","c"},{"f","r","g","c","r"},{"f","o"},{"f","o","x"},{"f","o","x","t"},{"f","o","x","d"},{"f","o","l"},{"l"},{"l","q"},{"c"},{"h"},{"h","t"},{"h","o"},{"h","o","d"},{"h","o","t"}};
