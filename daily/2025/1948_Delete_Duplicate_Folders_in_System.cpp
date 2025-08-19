@@ -18,7 +18,7 @@ public:
 
     Trie() : root(new Node()) {}
 
-    void add_floder(vector<string>& path){
+    void add_folder(vector<string>& path){
         Node* curr = root;
         for (string& p : path){
             if (curr->children.find(p) == curr->children.end()) curr->children[p] = new Node();
@@ -26,15 +26,15 @@ public:
         }
     }
 
-    void construct_subfloder(Node* curr){
+    void construct_subfolder(Node* curr){
         for (auto& [p, n] : curr->children){
-            construct_subfloder(n);
+            construct_subfolder(n);
             curr->serial += "(" + p + n->serial + ")";
         }
         if (curr->serial != "") freq[curr->serial]++;
     }
 
-    vector<vector<string>> find_unique_floder(){
+    vector<vector<string>> find_unique_folder(){
         vector<vector<string>> ans;
         for (auto& [child_path_name, child_node] : root->children){
             vector<string> curr_path = {child_path_name};
@@ -58,9 +58,9 @@ class Solution {
 public:
     vector<vector<string>> deleteDuplicateFolder(vector<vector<string>>& paths) {
         Trie T;
-        for (auto& path : paths) T.add_floder(path);
-        T.construct_subfloder(T.root);
-        return T.find_unique_floder();
+        for (auto& path : paths) T.add_folder(path);
+        T.construct_subfolder(T.root);
+        return T.find_unique_folder();
     }
 };
 
