@@ -1,0 +1,11 @@
+string s = "cdbcbbaaabab";
+int x = 4;
+int y = 5;
+
+string s = "aabbaaxybbaabb";
+int x = 5;
+int y = 4;
+
+string s = "aabbabkbbbfvybssbtaobaaaabataaadabbbmakgabbaoapbbbbobaabvqhbbzbbkapabaavbbeghacabamdpaaqbqabbjbababmbakbaabajabasaabbwabrbbaabbafubayaazbbbaababbaaha";
+int x = 1926;
+int y = 4320;
