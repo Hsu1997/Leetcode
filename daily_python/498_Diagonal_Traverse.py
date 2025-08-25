@@ -7,8 +7,9 @@ class Solution:
         m = len(mat)
         n = len(mat[0])
         ans = []
+        temp = []
         for round in range(m + n - 1):
-            temp = []
+            temp.clear()
             if round < n:
                 i = 0
                 j = round
