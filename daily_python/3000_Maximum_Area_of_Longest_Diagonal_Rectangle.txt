@@ -1,0 +1,5 @@
+vector<vector<int>> dimensions = {{9,3},{8,6}};
+
+vector<vector<int>> dimensions = {{3,4},{4,3}};
+
+vector<vector<int>> dimensions = {{6,5},{8,6},{2,10},{8,1},{9,2},{3,5},{3,5}};
