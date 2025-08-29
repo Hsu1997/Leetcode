@@ -1,0 +1,5 @@
+int n = 3;
+int m = 2;
+
+int n = 1;
+int m = 1;
