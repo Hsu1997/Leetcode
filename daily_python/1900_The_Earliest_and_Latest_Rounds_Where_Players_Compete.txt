@@ -1,0 +1,7 @@
+int n = 11;
+int firstPlayer = 2;
+int secondPlayer = 4;
+
+int n = 5;
+int firstPlayer = 1;
+int secondPlayer = 5;
