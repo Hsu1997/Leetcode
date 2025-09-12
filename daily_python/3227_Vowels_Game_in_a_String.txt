@@ -1,0 +1,3 @@
+string s = "leetcoder";
+
+string s = "bbcd";
