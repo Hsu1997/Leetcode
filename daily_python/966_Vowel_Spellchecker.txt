@@ -1,0 +1,5 @@
+vector<string> wordlist = {"KiTe","kite","hare","Hare"};
+vector<string> queries = {"kite","Kite","KiTe","Hare","HARE","Hear","hear","keti","keet","keto"};
+
+vector<string> wordlist = {"yellow"};
+vector<string> queries = {"YellOw"};
