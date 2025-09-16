@@ -1,0 +1,8 @@
+string text = "hello world";
+string brokenLetters = "ad";
+
+string text = "leet code";
+string brokenLetters = "lt";
+
+string text = "leet code";
+string brokenLetters = "e";
