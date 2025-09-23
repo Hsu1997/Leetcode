@@ -1,0 +1,8 @@
+string version1 = "1.2";
+string version2 = "1.10";
+
+string version1 = "1.01";
+string version2 = "1.001";
+
+string version1 = "1.0";
+string version2 = "1.0.0.0";
