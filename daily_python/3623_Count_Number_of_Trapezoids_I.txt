@@ -1,0 +1,5 @@
+vector<vector<int>> points = {{1,0},{2,0},{3,0},{2,2},{3,2}};
+
+vector<vector<int>> points = {{0,0},{1,0},{0,1},{2,1}};
+
+vector<vector<int>> points = {{87,-39},{12,-94},{-30,-11},{-76,-11}};
