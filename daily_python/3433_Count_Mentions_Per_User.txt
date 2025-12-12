@@ -1,0 +1,8 @@
+int numberOfUsers = 2;
+vector<vector<string>> events = {{"MESSAGE","10","id1 id0"},{"OFFLINE","11","0"},{"MESSAGE","71","HERE"}};
+
+int numberOfUsers = 2;
+vector<vector<string>> events = {{"MESSAGE","10","id1 id0"},{"OFFLINE","12","0"},{"MESSAGE","12","ALL"}};
+
+int numberOfUsers = 2;
+vector<vector<string>> events = {{"OFFLINE","10","0"},{"MESSAGE","12","HERE"}};
