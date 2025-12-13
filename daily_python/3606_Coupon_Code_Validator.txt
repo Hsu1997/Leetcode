@@ -1,0 +1,7 @@
+vector<string> code = {"SAVE20","","PHARMA5","SAVE@20"};
+vector<string> businessLine = {"restaurant","grocery","pharmacy","restaurant"};
+vector<bool> isActive = {true,true,true,true};
+
+vector<string> code = {"GROCERY15","ELECTRONICS_50","DISCOUNT10"};
+vector<string> businessLine = {"grocery","electronics","invalid"};
+vector<bool> isActive = {false,true,true};
