@@ -1,0 +1,7 @@
+string corridor = "SSPPSPS";
+
+string corridor = "PPSPSP";
+
+string corridor = "S";
+
+string corridor = "SSPPPPPPPPPPSS";
