@@ -1,0 +1,5 @@
+vector<string> strs = {"ca","bb","ac"};
+
+vector<string> strs = {"xc","yb","za"};
+
+vector<string> strs = {"zyx","wvu","tsr"};
