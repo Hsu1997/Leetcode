@@ -3,18 +3,19 @@ import sys
 
 class Solution:
     def bestClosingTime(self, customers: str) -> int:
-        y = customers.count('Y')
-        n = 0
+        n = len(customers)
+        cnt_y = customers.count('Y')
+        cnt_n = 0
         ans = -1
-        min_penalty = len(customers)
-        for idx in range(len(customers)):
-            if y + n < min_penalty:
-                min_penalty = y + n
+        min_penalty = n
+        for idx in range(n):
+            if cnt_y + cnt_n < min_penalty:
+                min_penalty = cnt_y + cnt_n
                 ans = idx
-            y -= (customers[idx] == 'Y')
-            n += (customers[idx] == 'N')
-        if n < min_penalty:
-            return len(customers)
+            cnt_y -= (customers[idx] == 'Y')
+            cnt_n += (customers[idx] == 'N')
+        if cnt_n < min_penalty:
+            return n
         return ans
 
 def readDataSet(filename):
