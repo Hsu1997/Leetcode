@@ -1,0 +1,8 @@
+vector<int> happiness = {1,2,3};
+int k = 2;
+
+vector<int> happiness = {1,1,1,1};
+int k = 2;
+
+vector<int> happiness = {2,3,4,5};
+int k = 2;
