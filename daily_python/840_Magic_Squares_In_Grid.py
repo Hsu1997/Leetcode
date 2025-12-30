@@ -33,6 +33,8 @@ class Solution:
     def numMagicSquaresInside(self, grid: List[List[int]]) -> int:
         m = len(grid)
         n = len(grid[0])
+        if m < 3 or n < 3:
+            return 0
         ans = 0
         for i in range(m-2):
             for j in range(n-2):
@@ -44,7 +46,7 @@ def readDataSet(filename):
     dataset = []
     with open(filename, 'r') as file:
         content = file.read().strip()
-        blocks = content.split('\n')
+        blocks = content.split('\n\n')
         for block in blocks:
             data = block.split('=')[1].strip().strip(';').replace('{', '[').replace('}',']')
             dataset.append(eval(data))
