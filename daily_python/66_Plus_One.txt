@@ -1,0 +1,9 @@
+vector<int> digits = {1,2,3};
+
+vector<int> digits = {4,3,2,1};
+
+vector<int> digits = {9};
+
+vector<int> digits = {4,3,2,9};
+
+vector<int> digits = {9,9,9,9,9};
