@@ -1,0 +1,5 @@
+string bottom = "BCD";
+vector<string> allowed = {"BCC","CDE","CEA","FFF"};
+
+string bottom = "AAAA";
+vector<string> allowed = {"AAB","AAC","BCD","BBE","DEF"};
