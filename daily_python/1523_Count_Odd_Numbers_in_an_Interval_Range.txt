@@ -1,0 +1,8 @@
+int low = 3;
+int high = 7;
+
+int low = 8;
+int high = 10;
+
+int low = 21;
+int high = 22;
