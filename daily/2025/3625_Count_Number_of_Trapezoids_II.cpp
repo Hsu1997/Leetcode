@@ -49,7 +49,8 @@ public:
                     int g = gcd(abs(dx), abs(dy));
                     dx /= g;
                     dy /= g;
-                    intercept = (float)(y1 * dx - x1 * dy) / dx;
+                    // intercept = (float)(y1 * dx - x1 * dy) / dx;
+                    intercept = (float)(y1 * dx - x1 * dy);
                 }
                 slopeToIntercept[{dx,dy}].push_back(intercept);
                 midpointToSlope[{x1 + x2, y1 + y2}].push_back({dx, dy});
