@@ -1,0 +1,3 @@
+string directions = "RLRSLL";
+
+string directions = "LLRR";
