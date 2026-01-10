@@ -9,3 +9,6 @@ string s2 = "at";
 
 string s1 = "cccbcacbbb";
 string s2 = "babbaacc";
+
+string s1 = "djoqzmzxe";
+string s2 = "onydroiizrlggfh";

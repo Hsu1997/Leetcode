@@ -8,7 +8,7 @@ class Solution:
         temp = [0] * n
         dp[0] = ord(s1[0]) if s1[0] == s2[0] else 0
         for j in range(1, n):
-            dp[j] = max(dp[j-1], ord(s1[0]) if s1[0] == s2[0] else 0)
+            dp[j] = max(dp[j-1], ord(s1[0]) if s1[0] == s2[j] else 0)
         for i in range(1, m):
             temp[0] = max(dp[0], ord(s1[i]) if s1[i] == s2[0] else 0)
             for j in range(1, n):
