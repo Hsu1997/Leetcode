@@ -17,8 +17,7 @@ class Solution:
                 else:
                     temp[j] = max(temp[j-1], dp[j])
             dp, temp = temp, dp
-        ans = sum(ord(c) for c in s1)
-        ans += sum(ord(c) for c in s2)
+        ans = sum(ord(c) for c in s1) + sum(ord(c) for c in s2)
         return ans - 2 * dp[-1]
 
 def readDataSet(filename):
