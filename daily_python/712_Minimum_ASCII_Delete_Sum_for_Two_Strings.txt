@@ -1,0 +1,11 @@
+string s1 = "sea";
+string s2 = "eat";
+
+string s1 = "delete";
+string s2 = "leet";
+
+string s1 = "a";
+string s2 = "at";
+
+string s1 = "cccbcacbbb";
+string s2 = "babbaacc";
