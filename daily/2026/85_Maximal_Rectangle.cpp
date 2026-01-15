@@ -49,7 +49,7 @@ public:
                     curr = (matrix[i][j] == '0')? 0 : dp[j] + 1;
                     temp[j] = curr;
                 }
-                while(!sta.empty() && temp[sta.top()] > curr){
+                while(!sta.empty() && temp[sta.top()] >= curr){
                     int h = temp[sta.top()];
                     sta.pop();
                     int leftSmaller = (sta.empty())? -1 : sta.top();
