@@ -39,7 +39,7 @@ public:
 int main(){
     int n = 2;
     int m = 1;
-    vector<int> hBars = vector{2,3};
+    vector<int> hBars = {2,3};
     vector<int> vBars = {2};
     // int n = 1;
     // int m = 1;
