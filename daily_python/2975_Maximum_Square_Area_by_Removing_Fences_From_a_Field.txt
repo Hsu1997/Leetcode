@@ -1,0 +1,14 @@
+int m = 4;
+int n = 3;
+vector<int> hFences = {2,3};
+vector<int> vFences = {2};
+
+int m = 6;
+int n = 7;
+vector<int> hFences = {2};
+vector<int> vFences = {4};
+
+int m = 3;
+int n = 9;
+vector<int> hFences = {2};
+vector<int> vFences = {8,6,5,4};
