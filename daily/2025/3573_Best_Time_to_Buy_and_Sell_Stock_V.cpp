@@ -36,8 +36,12 @@ public:
                 dp[j][1] = max(dp[j][1], dp[j][0] + prices[i]);
                 dp[j][0] = max({dp[j][0], dp[j-1][1] - prices[i], dp[j-1][2] + prices[i]});
             }
+            dp[0][2] = max(dp[0][2], 1LL * -prices[i]);
+            dp[0][1] = max(dp[0][1], 1LL * prices[i]);
         }
-        return dp[k][0];
+        long long ans = 0;
+        for (int j = 0; j <= k; j++) ans = max(ans, dp[j][0]);
+        return ans;
     }
 };
 
@@ -46,6 +50,8 @@ int main(){
     int k = 2;
     // vector<int> prices = {12,16,19,19,8,1,19,13,9};
     // int k = 3;
+    // vector<int> prices = {14,6,10,19};
+    // int k = 1;
     Solution S;
     cout << S.maximumProfit(prices, k) << endl;
     return 0;
