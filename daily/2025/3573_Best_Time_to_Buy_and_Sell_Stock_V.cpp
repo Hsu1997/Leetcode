@@ -39,9 +39,7 @@ public:
             dp[0][2] = max(dp[0][2], 1LL * -prices[i]);
             dp[0][1] = max(dp[0][1], 1LL * prices[i]);
         }
-        long long ans = 0;
-        for (int j = 0; j <= k; j++) ans = max(ans, dp[j][0]);
-        return ans;
+        return dp[k][0];
     }
 };
 
