@@ -17,7 +17,7 @@ public:
 
     Trie() : root(new Node()) {}
 
-    void add(string& s, int i){
+    void add(const string& s, int i){
         Node* r = root;
         for (char c : s){
             int v = c - 'a';
@@ -31,7 +31,7 @@ public:
 class Solution {
 public:
     long long minimumCost(string source, string target, vector<string>& original, vector<string>& changed, vector<int>& cost) {
-        int inf = 1e9;
+        const long long inf = (1LL << 60);
         int idx = 0;
         unordered_map<string, int> stringToIdx;
         Trie T;
@@ -47,23 +47,28 @@ public:
             T.add(s, idx);
             idx++;
         }
-        vector<vector<int>> d(idx, vector<int>(idx, inf));
+        vector<vector<long long>> d(idx, vector<long long>(idx, inf));
         for (int i = 0; i < original.size(); i++){
-            d[stringToIdx[original[i]]][stringToIdx[changed[i]]] = min(d[stringToIdx[original[i]]][stringToIdx[changed[i]]], cost[i]);
+            int u = stringToIdx[original[i]];
+            int v = stringToIdx[changed[i]];
+            d[u][v] = min(d[u][v], 1LL * cost[i]);
         }
         for (int i = 0; i < idx; i++) d[i][i] = 0;
         for (int k = 0; k < idx; k++){
             for (int i = 0; i < idx; i++){
+                if (d[i][k] >= inf) continue;
                 for (int j = 0; j < idx; j++){
+                    if (d[k][j] >= inf) continue;
                     d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
                 }
             }
         }
         int n = source.length();
         // dp[i] = total cost by changed [0 : i - 1]
-        vector<long long> dp(n + 1, 1LL << 50);
+        vector<long long> dp(n + 1, inf);
         dp[0] = 0;
         for (int i = 1; i <= n; i++){
+            if (dp[i-1] >= inf) continue;
             Node* currSource = T.root;
             Node* currTarget = T.root;
             if (source[i-1] == target[i-1]) dp[i] = min(dp[i], dp[i-1]);
@@ -71,12 +76,13 @@ public:
                 currSource = currSource->child[source[j] - 'a'];
                 currTarget = currTarget->child[target[j] - 'a'];
                 if (currSource == nullptr || currTarget == nullptr) break;
-                if (currSource->idx != -1 && currTarget->idx != -1 && d[currSource->idx][currTarget->idx] != inf){
-                    dp[j+1] = min(dp[j+1], dp[i-1] + d[currSource->idx][currTarget->idx]);
+                if (currSource->idx != -1 && currTarget->idx != -1){
+                    long long w = d[currSource->idx][currTarget->idx];
+                    if (w < inf) dp[j+1] = min(dp[j+1], dp[i-1] + w);
                 }
             }
         }
-        return dp.back() == (1LL << 50)? -1 : dp.back();
+        return dp[n] >= inf? -1 : dp[n];
     }
 };
 
