@@ -1,0 +1,23 @@
+string source = "abcd";
+string target = "acbe";
+vector<string> original = {"a","b","c","c","e","d"};
+vector<string> changed = {"b","c","b","e","b","e"};
+vector<int> cost = {2,5,5,1,2,20};
+
+string source = "abcdefgh";
+string target = "acdeeghh";
+vector<string> original = {"bcd","fgh","thh"};
+vector<string> changed = {"cde","thh","ghh"};
+vector<int> cost = {1,3,5};
+
+string source = "abcdefgh";
+string target = "addddddd";
+vector<string> original = {"bcd","defgh"};
+vector<string> changed = {"ddd","ddddd"};
+vector<int> cost = {100,1578};
+
+string source = "fjybg";
+string target = "apyyt";
+vector<string> original = {"bg","xr","cc","ip","vq","po","ym","rh","vw","lf","lo","ee","qv","yr","f","w","i","u","g","a","e","f","s","r","p","j","o","g","i","u"};
+vector<string> changed = {"xr","cc","ip","vq","po","ym","rh","vw","lf","lo","ee","qv","yr","yt","w","i","u","g","a","e","f","s","r","p","a","o","g","i","u","p"};
+vector<int> cost = {97733,90086,87125,85361,75644,46301,21616,79538,52507,95884,79353,61127,58665,96031,95035,12116,41158,91096,47819,88522,25493,80186,66981,87597,56691,86820,89031,99954,41271,39699};
