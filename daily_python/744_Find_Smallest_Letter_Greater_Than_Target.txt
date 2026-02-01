@@ -1,0 +1,8 @@
+vector<char> letters = {'c','f','j'};
+char target = 'a';
+
+vector<char> letters = {'c','f','j'};
+char target = 'c';
+
+vector<char> letters = {'x','x','y','y'};
+char target = 'z';
