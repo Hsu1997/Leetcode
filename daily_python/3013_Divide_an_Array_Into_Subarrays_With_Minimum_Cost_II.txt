@@ -1,0 +1,11 @@
+vector<int> nums = {1,3,2,6,4,2};
+int k = 3;
+int dist = 3;
+
+vector<int> nums = {10,1,2,2,2,1};
+int k = 4;
+int dist = 3;
+
+vector<int> nums = {10,8,18,9};
+int k = 3;
+int dist = 1;
