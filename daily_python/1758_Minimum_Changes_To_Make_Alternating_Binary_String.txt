@@ -1,0 +1,5 @@
+string s = "0100";
+
+string s = "10";
+
+string s = "1111";
