@@ -1,0 +1,7 @@
+string s = "abbac";
+
+string s = "aabcc";
+
+string s = "aba";
+
+string s = "acbab";
