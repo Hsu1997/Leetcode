@@ -1,0 +1,8 @@
+int mountainHeight = 4;
+vector<int> workerTimes = {2,1,1};
+
+int mountainHeight = 10;
+vector<int> workerTimes = {3,2,2,4};
+
+int mountainHeight = 5;
+vector<int> workerTimes = {1};
