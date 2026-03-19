@@ -1,0 +1,5 @@
+vector<vector<char>> grid = {{'X','Y','.'},{'Y','.','.'}};
+
+vector<vector<char>> grid = {{'X','X'},{'X','Y'}};
+
+vector<vector<char>> grid = {{'.','.'},{'.','.'}};
