@@ -20,7 +20,7 @@ class Solution:
                 return True
         acc = 0
         for j in range(n):
-            acc += h[j]
+            acc += v[j]
             if acc == total // 2:
                 return True
         return False
