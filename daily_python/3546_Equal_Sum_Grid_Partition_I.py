@@ -16,12 +16,12 @@ class Solution:
         acc = 0
         for i in range(m):
             acc += h[i]
-            if acc == total // 2:
+            if acc == total / 2:
                 return True
         acc = 0
         for j in range(n):
             acc += v[j]
-            if acc == total // 2:
+            if acc == total / 2:
                 return True
         return False
 
