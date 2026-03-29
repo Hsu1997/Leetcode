@@ -1,0 +1,9 @@
+vector<vector<int>> grid = {{1,4},{2,3}};
+
+vector<vector<int>> grid = {{1,2},{3,4}};
+
+vector<vector<int>> grid = {{1,2,4},{2,3,5}};
+
+vector<vector<int>> grid = {{4,1,8},{3,2,6}};
+
+vector<vector<int>> grid = {{10,5,4,5}};
