@@ -1,0 +1,8 @@
+string s1 = "abcd";
+string s2 = "cdab";
+
+string s1 = "abcd";
+string s2 = "dacb";
+
+string s1 = "ijso";
+string s2 = "imsj";
