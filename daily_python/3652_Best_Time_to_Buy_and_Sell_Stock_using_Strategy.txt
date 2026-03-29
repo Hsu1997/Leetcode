@@ -1,0 +1,11 @@
+vector<int> prices = {4,2,8};
+vector<int> strategy = {-1,0,1};
+int k = 2;
+
+vector<int> prices = {5,4,3};
+vector<int> strategy = {1,1,0};
+int k = 2;
+
+vector<int> prices = {5,8};
+vector<int> strategy = {-1,-1};
+int k = 2;
