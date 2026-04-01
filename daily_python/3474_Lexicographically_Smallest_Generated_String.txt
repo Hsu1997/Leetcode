@@ -1,0 +1,8 @@
+string str1 = "TFTF";
+string str2 = "ab";
+
+string str1 = "TFTF";
+string str2 = "abc";
+
+string str1 = "F";
+string str2 = "d";
