@@ -1,0 +1,14 @@
+string encodedText = "ch   ie   pr";
+int rows = 3;
+
+string encodedText = "iveo    eed   l te   olc";
+int rows = 4;
+
+string encodedText = "coding";
+int rows = 1;
+
+string encodedText = " b  ac";
+int rows = 2;
+
+string encodedText = "iveo    eed   l t    olc";
+int rows = 4;
