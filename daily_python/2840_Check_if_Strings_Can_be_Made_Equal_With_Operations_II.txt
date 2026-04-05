@@ -1,0 +1,5 @@
+string s1 = "abcdba";
+string s2 = "cabdab";
+
+string s1 = "abe";
+string s2 = "bea";
