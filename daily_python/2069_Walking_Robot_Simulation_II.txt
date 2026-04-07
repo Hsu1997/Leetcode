@@ -1,0 +1,5 @@
+["Robot","step","step","getPos","getDir","step","step","step","getPos","getDir"]
+[[6,3],[2],[2],[],[],[2],[1],[4],[],[]]
+
+["Robot","step","getPos","getDir","step","getPos","getDir","step","step","getPos","getDir","step","step","step","getPos","getDir","step","step","step","getPos","getDir","step"]
+[[8,2],[17],[],[],[21],[],[],[22],[34],[],[],[1],[46],[35],[],[],[44],[14],[31],[],[],[50]]
