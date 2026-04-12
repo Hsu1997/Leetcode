@@ -1,0 +1,7 @@
+string word = "CAKE";
+
+string word = "HAPPY";
+
+string word = "SHH";
+
+string word = "WQIQZ";
