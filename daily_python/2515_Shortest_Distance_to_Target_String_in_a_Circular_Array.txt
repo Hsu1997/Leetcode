@@ -1,0 +1,11 @@
+vector<string> words = {"hello","i","am","leetcode","hello"};
+string target = "hello";
+int startIndex = 1;
+
+vector<string> words = {"a","b","leetcode"};
+string target = "leetcode";
+int startIndex = 0;
+
+vector<string> words = {"i","eat","leetcode"};
+string target = "ate";
+int startIndex = 0;
