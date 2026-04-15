@@ -10,28 +10,27 @@ public:
         int m = factory.size();
         sort(robot.begin(), robot.end());
         sort(factory.begin(), factory.end());
-        vector<vector<long long>> dp(m, vector<long long>(n, LLONG_MAX / 2));
-        for (int f = 0; f < m; f++){
+        vector<long long> prev(n, LLONG_MAX / 2);
+        long long acc = 0;
+        for (int cap = 0; cap < factory[0][1]; cap++){
+            acc += abs(robot[cap] - factory[0][0]);
+            prev[cap] = acc;
+        }
+        for (int f = 1; f < m; f++){
+            vector<long long> curr = prev;
             int pos = factory[f][0];
             int limit = factory[f][1];
-            long long cost = 0;
-            for (int cap = 0; cap < limit; cap++){
-                cost += abs(pos - robot[cap]);
-                dp[f][cap] = cost;
-                if (f > 0) dp[f][cap] = min(dp[f][cap], dp[f-1][cap]);
-            }
-            if (f == 0) continue;
-            for (int start = 1; start < n; start++){
-                cost = 0;
-                dp[f][start] = min(dp[f][start], dp[f-1][start]);
+            for (int start = 0; start < n; start++){
+                acc = 0;
                 for (int cap = 0; cap < limit; cap++){
-                    if (start + cap == n) break;
-                    cost += abs(pos - robot[start + cap]);
-                    dp[f][start + cap] = min(dp[f][start + cap], dp[f-1][start - 1] + cost);
+                    if (start + cap >= n) break;
+                    acc += abs(robot[start + cap] - pos);
+                    curr[start + cap] = min(curr[start + cap], ((start > 0)? prev[start - 1] : 0) + acc);
                 }
             }
+            prev = curr;
         }
-        return dp[m - 1][n - 1];
+        return prev.back();
     }
 };
 
