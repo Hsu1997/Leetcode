@@ -1,0 +1,5 @@
+vector<string> queries = {"word","note","ants","wood"};
+vector<string> dictionary = {"wood","joke","moat"};
+
+vector<string> queries = {"yes"};
+vector<string> dictionary = {"not"};
