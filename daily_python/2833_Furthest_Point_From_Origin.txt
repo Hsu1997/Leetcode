@@ -1,0 +1,5 @@
+string moves = "L_RL__R";
+
+string moves = "_R__LL_";
+
+string moves = "_______";
