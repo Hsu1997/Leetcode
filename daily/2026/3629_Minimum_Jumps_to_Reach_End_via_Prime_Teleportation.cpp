@@ -54,7 +54,7 @@ public:
                     }
                 }
             }
-            candidate = move(temp);
+            candidate = std::move(temp);
             ans++;
         }
         return -1;
