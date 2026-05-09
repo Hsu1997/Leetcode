@@ -1,0 +1,5 @@
+vector<vector<int>> grid = {{40,10},{30,20}};
+int k = 1;
+
+vector<vector<int>> grid = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+int k = 2;
