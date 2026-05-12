@@ -1,0 +1,3 @@
+vector<int> nums = {13,25,83,77};
+
+vector<int> nums = {7,1,3,9};
