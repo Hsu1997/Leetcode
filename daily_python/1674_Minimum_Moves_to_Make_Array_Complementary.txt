@@ -1,0 +1,11 @@
+vector<int> nums = {1,2,4,3};
+int limit = 4;
+
+vector<int> nums = {1,2,2,1};
+int limit = 2;
+
+vector<int> nums = {1,2,1,2};
+int limit = 2;
+
+vector<int> nums = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+int limit = 1;
