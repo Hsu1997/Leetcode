@@ -10,6 +10,9 @@ class Solution:
             if i > n:
                 return False
             cnt[i] += 1
+        for i in range(1, n):
+            if cnt[i] != 1:
+                return False
         return cnt[n] == 2
 
 def readDataSet(filename):
