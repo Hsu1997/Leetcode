@@ -12,12 +12,12 @@ class Solution:
             curr = que.pop(0)
             if arr[curr] == 0:
                 return True
-            if curr - arr[curr] >= 0 and not visited[arr[curr]]:
-                visited[arr[curr]] = True
-                que.append(arr[curr])
-            if curr + arr[curr] < n and not visited[arr[curr]]:
-                visited[arr[curr]] = True
-                que.append(arr[curr])
+            if curr - arr[curr] >= 0 and not visited[curr - arr[curr]]:
+                visited[curr - arr[curr]] = True
+                que.append(curr - arr[curr])
+            if curr + arr[curr] < n and not visited[curr + arr[curr]]:
+                visited[curr + arr[curr]] = True
+                que.append(curr + arr[curr])
         return False
 
 def readDataSet(filename):
