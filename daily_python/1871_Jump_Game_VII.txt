@@ -1,0 +1,7 @@
+string s = "011010";
+int minJump = 2;
+int maxJump = 3;
+
+string s = "01101110";
+int minJump = 2;
+int maxJump = 3;
