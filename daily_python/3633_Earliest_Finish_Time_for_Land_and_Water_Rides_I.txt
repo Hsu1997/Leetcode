@@ -1,0 +1,9 @@
+vector<int> landStartTime = {2,8};
+vector<int> landDuration = {4,1};
+vector<int> waterStartTime = {6};
+vector<int> waterDuration = {3};
+
+vector<int> landStartTime = {5};
+vector<int> landDuration = {3};
+vector<int> waterStartTime = {1};
+vector<int> waterDuration = {10};
