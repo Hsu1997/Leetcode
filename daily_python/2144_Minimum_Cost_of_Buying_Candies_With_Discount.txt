@@ -1,0 +1,5 @@
+vector<int> cost = {1,2,3};
+
+vector<int> cost = {6,5,7,9,2,2};
+
+vector<int> cost = {5,5};
