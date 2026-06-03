@@ -7,8 +7,6 @@ class Solution {
 public:
     int dp(int start, vector<int>& memo, vector<int>& arr, int d){
         if (memo[start] != -1) return memo[start];
-        int s = max(0, start - d);
-        int e = min(int(arr.size()) - 1, start + d);
         int res = 0;
         for (int i = start - 1; i >= max(0, start - d); i--){
             if (arr[i] >= arr[start]) break;
