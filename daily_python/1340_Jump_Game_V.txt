@@ -1,0 +1,8 @@
+vector<int> arr = {6,4,14,6,8,13,9,7,10,6,12};
+int d = 2;
+
+vector<int> arr = {3,3,3,3,3};
+int d = 3;
+
+vector<int> arr = {7,6,5,4,3,2,1};
+int d = 1;
