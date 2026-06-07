@@ -1,0 +1,5 @@
+vector<string> wordsContainer = {"abcd","bcd","xbcd"};
+vector<string> wordsQuery = {"cd","bcd","xyz"};
+
+vector<string> wordsContainer = {"abcdefgh","poiuygh","ghghgh"};
+vector<string> wordsQuery = {"gh","acbfgh","acbfegh"};
