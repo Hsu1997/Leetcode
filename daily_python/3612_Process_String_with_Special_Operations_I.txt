@@ -1,0 +1,3 @@
+string s = "a#b%*";
+
+string s = "z*#";
