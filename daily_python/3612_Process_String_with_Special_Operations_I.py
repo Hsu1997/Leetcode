@@ -7,7 +7,7 @@ class Solution:
         ans = []
         for c in s:
             if c == '*':
-                if c:
+                if ans:
                     ans.pop()
             elif c == '#':
                 ans += ans.copy()
