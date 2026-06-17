@@ -1,0 +1,5 @@
+vector<int> nodes = {5,4,2,1};
+
+vector<int> nodes = {4,2,2,3};
+
+vector<int> nodes = {1,100000};
