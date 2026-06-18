@@ -1,0 +1,8 @@
+int hour = 12;
+int minutes = 30;
+
+int hour = 3;
+int minutes = 30;
+
+int hour = 3;
+int minutes = 15;
