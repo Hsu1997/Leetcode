@@ -69,7 +69,7 @@ public:
                 int p = queries[i][1];
                 auto it = obstacleSet.upper_bound(p);
                 int prev_obstacle = *prev(it);
-                int max_interval = max(p - prev_obstacle, T.query(0, prev_obstacle));
+                int max_interval = max(p - prev_obstacle, T.query(0, p));
                 ans.push_back(max_interval >= queries[i][2]);
             }
         }
