@@ -17,5 +17,12 @@
         "string_view": "cpp",
         "bitset": "cpp",
         "stack": "cpp"
-    }
+    },
+    "python-envs.pythonProjects": [
+        {
+            "path": ".",
+            "envManager": "ms-python.python:system",
+            "packageManager": "ms-python.python:pip"
+        }
+    ]
 }
