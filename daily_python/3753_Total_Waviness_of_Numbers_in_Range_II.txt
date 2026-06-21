@@ -1,0 +1,8 @@
+int num1 = 120;
+int num2 = 130;
+
+int num1 = 198;
+int num2 = 202;
+
+int num1 = 4848;
+int num2 = 4848;
