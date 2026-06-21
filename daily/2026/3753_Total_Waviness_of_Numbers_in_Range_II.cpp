@@ -38,7 +38,6 @@ public:
         return ans;
     }
     long long totalWaviness(long long num1, long long num2) {
-        
         return solve(num2) - solve(num1 - 1);
     }
 private:
