@@ -16,22 +16,18 @@ public:
             up[i] = i;
             down[i] = m - 1 - i;
         }
-        accup[0] = up[0];
+        // accup[0] = up[0];
         accdown[0] = down[0];
         for (int i = 1; i < m; i++){
             accup[i] = (accup[i-1] + up[i]) % mod;
             accdown[i] = (accdown[i-1] + down[i]) % mod;
         }
         for (int pos = 3; pos <= n; pos++){
-            vector<int> tempup(m + 1, 0);
-            vector<int> tempdown(m + 1, 0);
             for (int i = 0; i < m; i++){
-                tempup[i] = (i == 0)? 0 : accdown[i-1];
-                tempdown[i] = (accup[m - 1] - accup[i] + mod) % mod;
+                up[i] = (i == 0)? 0 : accdown[i-1];
+                down[i] = (accup[m - 1] - accup[i] + mod) % mod;
             }
-            swap(up, tempup);
-            swap(down, tempdown);
-            accup[0] = up[0];
+            // accup[0] = up[0];
             accdown[0] = down[0];
             for (int i = 1; i < m; i++){
                 accup[i] = (accup[i - 1] + up[i]) % mod;
