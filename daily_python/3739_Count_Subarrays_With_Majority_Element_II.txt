@@ -1,0 +1,8 @@
+vector<int> nums = {1,2,2,3};
+int target = 2;
+
+vector<int> nums = {1,1,1,1};
+int target = 1;
+
+vector<int> nums = {1,2,3};
+int target = 4;
