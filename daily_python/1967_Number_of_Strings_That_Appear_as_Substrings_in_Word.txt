@@ -1,0 +1,11 @@
+vector<string> patterns = {"a","abc","bc","d"};
+string word = "abc";
+
+vector<string> patterns = {"a","b","c"};
+string word = "aaaaabbbbb";
+
+vector<string> patterns = {"a","a","a"};
+string word = "ab";
+
+vector<string> patterns = {"ok","alkmfp","ralkm","cw","lk","rusmjlugnm","pbhjybt","fpbh","posscsob","dkbcxzqdh","rrlncoytcnsg"};
+string word = "vralkmfpbhjybt";
