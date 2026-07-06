@@ -1,0 +1,5 @@
+vector<string> board = {"E23","2X2","12S"};
+
+vector<string> board = {"E12","1X1","21S"};
+
+vector<string> board = {"E11","XXX","11S"};
