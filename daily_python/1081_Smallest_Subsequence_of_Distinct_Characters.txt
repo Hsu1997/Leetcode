@@ -1,0 +1,13 @@
+string s = "bcabc";
+
+string s = "cbacdcbc";
+
+string s = "asexijes";
+
+string s = "wamecwcnenesdsdsdsds";
+
+string s = "wxeijjiehuxasenfmkwsesmndsndsnnndsnsdssdsdss";
+
+string s = "xweirnwexdnreujk";
+
+string s = "cbaacabcaaccaacababa";
