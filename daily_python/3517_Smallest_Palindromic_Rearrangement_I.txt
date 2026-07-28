@@ -1,0 +1,7 @@
+string s = "z";
+
+string s = "babab";
+
+string s = "daccad";
+
+string s = "yey";
