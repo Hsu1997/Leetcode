@@ -1,0 +1,8 @@
+string s = "abba";
+int k = 2;
+
+string s = "aa";
+int k = 2;
+
+string s = "bacab";
+int k = 1;
