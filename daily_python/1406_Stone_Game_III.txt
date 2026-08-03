@@ -1,0 +1,5 @@
+vector<int> stoneValue = {1,2,3,7};
+
+vector<int> stoneValue = {1,2,3,-9};
+
+vector<int> stoneValue = {1,2,3,6};
