@@ -1,0 +1,11 @@
+string num = "1234";
+long long t = 256;
+
+string num = "12355";
+long long t = 50;
+
+string num = "11111";
+long long t = 26;
+
+string num = "78";
+long long t = 42;
