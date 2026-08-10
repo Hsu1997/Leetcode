@@ -1,0 +1,17 @@
+string word1 = "vbcca";
+string word2 = "abc";
+
+string word1 = "bacdc";
+string word2 = "abc";
+
+string word1 = "aaaaaa";
+string word2 = "aaabc";
+
+string word1 = "abc";
+string word2 = "ab";
+
+string word1 = "ghhgghhhhhh";
+string word2 = "gg";
+
+string word1 = "abfdfeeaddccbbddfddcddaebdecaaebbebceaddcbbefdfebceefffeffeeeefeffeeefeefffreeeeffeeefeeffeeffeeeffeccbabbdcafdebdccfabbbcabfbeaecbfabfebaeedcabdceded";
+string word2 = "eefffeffeeeefeffeeefeefffeeeeeffeeefeeffeeffeeeffe";
