@@ -1,0 +1,7 @@
+string s = "babacc";
+string queryCharacters = "bcb";
+vector<int> queryIndices = {1,3,3};
+
+string s = "abyzz";
+string queryCharacters = "aa";
+vector<int> queryIndices = {2,1};
