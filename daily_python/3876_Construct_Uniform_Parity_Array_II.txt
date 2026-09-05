@@ -1,0 +1,5 @@
+vector<int> nums1 = {1,4,7};
+
+vector<int> nums1 = {2,3};
+
+vector<int> nums1 = {4,6};
