@@ -1,0 +1,11 @@
+vector<vector<int>> img1 = {{1,1,0},{0,1,0},{0,1,0}};
+vector<vector<int>> img2 = {{0,0,0},{0,1,1},{0,0,1}};
+
+vector<vector<int>> img1 = {{1}};
+vector<vector<int>> img2 = {{1}};
+
+vector<vector<int>> img1 = {{0}};
+vector<vector<int>> img2 = {{0}};
+
+vector<vector<int>> img1 = {{0,0,0,0,1},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+vector<vector<int>> img2 = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{1,0,0,0,0}};
