@@ -1,0 +1,9 @@
+string s = "()";
+
+string s = "()[]{}";
+
+string s = "(]";
+
+string s = "([])";
+
+string s = "([)]";
