@@ -1,0 +1,8 @@
+int num = 2;
+int sum = 3;
+
+int num = 2;
+int sum = 17;
+
+int num = 1;
+int sum = 10;
