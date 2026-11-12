@@ -1,0 +1,29 @@
+int cost1 = 3;
+int cost2 = 2;
+int costBoth = 1;
+int need1 = 3;
+int need2 = 2;
+
+int cost1 = 5;
+int cost2 = 4;
+int costBoth = 15;
+int need1 = 2;
+int need2 = 3;
+
+int cost1 = 5;
+int cost2 = 4;
+int costBoth = 15;
+int need1 = 0;
+int need2 = 0;
+
+int cost1 = 50;
+int cost2 = 55;
+int costBoth = 72;
+int need1 = 5;
+int need2 = 3;
+
+int cost1 = 388168;
+int cost2 = 988887;
+int costBoth = 336014;
+int need1 = 50411;
+int need2 = 252237;
