@@ -1,0 +1,8 @@
+int n = 4;
+vector<int> costs = {1,2,3,4};
+
+int n = 4;
+vector<int> costs = {5,1,6,2};
+
+int n = 3;
+vector<int> costs = {9,8,3};
