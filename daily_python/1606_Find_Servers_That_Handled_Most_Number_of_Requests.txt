@@ -1,0 +1,11 @@
+int k = 3;
+vector<int> arrival = {1,2,3,4,5};
+vector<int> load = {5,2,3,3,3};
+
+int k = 3;
+vector<int> arrival = {1,2,3,4};
+vector<int> load = {1,2,1,2};
+
+int k = 3;
+vector<int> arrival = {1,2,3};
+vector<int> load = {10,12,11};
