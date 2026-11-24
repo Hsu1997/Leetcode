@@ -1,0 +1,5 @@
+string s = "aaabbb";
+
+string s = "abab";
+
+string s = "bbb";
